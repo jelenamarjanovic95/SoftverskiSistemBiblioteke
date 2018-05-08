@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D6451EA6-A1F3-4487-8ED8-D6C1ADB02AE7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Forms</RootNamespace>
+    <AssemblyName>Forms</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClanForme\IzmeniClanaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClanForme\IzmeniClanaForm.Designer.cs">
+      <DependentUpon>IzmeniClanaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KnjigaForme\IzmeniKnjiguForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KnjigaForme\IzmeniKnjiguForm.Designer.cs">
+      <DependentUpon>IzmeniKnjiguForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KnjigaForme\KnjigaViseInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KnjigaForme\KnjigaViseInfoForm.Designer.cs">
+      <DependentUpon>KnjigaViseInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Komunikacija.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meni.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Meni.Designer.cs">
+      <DependentUpon>Meni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KnjigaForme\OdaberiAutora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KnjigaForme\OdaberiAutora.Designer.cs">
+      <DependentUpon>OdaberiAutora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KnjigaForme\PretragaKnjigaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KnjigaForme\PretragaKnjigaForm.Designer.cs">
+      <DependentUpon>PretragaKnjigaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClanForme\PretragaClanovaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClanForme\PretragaClanovaForm.Designer.cs">
+      <DependentUpon>PretragaClanovaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZaduzenjeForme\PrimerciKnjigeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZaduzenjeForme\PrimerciKnjigeForm.Designer.cs">
+      <DependentUpon>PrimerciKnjigeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZaduzenjeForme\PronadjiClanaZaduzenjeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZaduzenjeForme\PronadjiClanaZaduzenjeForm.Designer.cs">
+      <DependentUpon>PronadjiClanaZaduzenjeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZaduzenjeForme\PronadjiKnjiguZaduzenjeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZaduzenjeForme\PronadjiKnjiguZaduzenjeForm.Designer.cs">
+      <DependentUpon>PronadjiKnjiguZaduzenjeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZaduzenjeForme\PronadjiZaduzenje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZaduzenjeForme\PronadjiZaduzenje.Designer.cs">
+      <DependentUpon>PronadjiZaduzenje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZaduzenjeForme\RazduziForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZaduzenjeForme\RazduziForm.Designer.cs">
+      <DependentUpon>RazduziForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClanForme\UnosClanaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClanForme\UnosClanaForm.Designer.cs">
+      <DependentUpon>UnosClanaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KnjigaForme\UnosKnjigeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KnjigaForme\UnosKnjigeForm.Designer.cs">
+      <DependentUpon>UnosKnjigeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClanForme\ClanViseInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClanForme\ClanViseInfoForm.Designer.cs">
+      <DependentUpon>ClanViseInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZaduzenjeForme\ZaduziForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZaduzenjeForme\ZaduziForm.Designer.cs">
+      <DependentUpon>ZaduziForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ClanForme\IzmeniClanaForm.resx">
+      <DependentUpon>IzmeniClanaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KnjigaForme\IzmeniKnjiguForm.resx">
+      <DependentUpon>IzmeniKnjiguForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KnjigaForme\KnjigaViseInfoForm.resx">
+      <DependentUpon>KnjigaViseInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meni.resx">
+      <DependentUpon>Meni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KnjigaForme\OdaberiAutora.resx">
+      <DependentUpon>OdaberiAutora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KnjigaForme\PretragaKnjigaForm.resx">
+      <DependentUpon>PretragaKnjigaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClanForme\PretragaClanovaForm.resx">
+      <DependentUpon>PretragaClanovaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZaduzenjeForme\PrimerciKnjigeForm.resx">
+      <DependentUpon>PrimerciKnjigeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZaduzenjeForme\PronadjiClanaZaduzenjeForm.resx">
+      <DependentUpon>PronadjiClanaZaduzenjeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZaduzenjeForme\PronadjiKnjiguZaduzenjeForm.resx">
+      <DependentUpon>PronadjiKnjiguZaduzenjeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZaduzenjeForme\PronadjiZaduzenje.resx">
+      <DependentUpon>PronadjiZaduzenje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZaduzenjeForme\RazduziForm.resx">
+      <DependentUpon>RazduziForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClanForme\UnosClanaForm.resx">
+      <DependentUpon>UnosClanaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KnjigaForme\UnosKnjigeForm.resx">
+      <DependentUpon>UnosKnjigeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClanForme\ClanViseInfoForm.resx">
+      <DependentUpon>ClanViseInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZaduzenjeForme\ZaduziForm.resx">
+      <DependentUpon>ZaduziForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KontrolerPoslovneLogike\KontrolerPoslovneLogike.csproj">
+      <Project>{2ce7e382-77be-4034-86b9-d780305489d0}</Project>
+      <Name>KontrolerPoslovneLogike</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{2efa3e0a-4058-49ef-84cd-db7f76f4b2b5}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Server_Console\Server_Console.csproj">
+      <Project>{7b4f7e5e-d531-4d3a-948f-5894603664cf}</Project>
+      <Name>Server_Console</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Session\Session.csproj">
+      <Project>{225aa739-751c-45fb-aba1-f4b5bcf1dd9f}</Project>
+      <Name>Session</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

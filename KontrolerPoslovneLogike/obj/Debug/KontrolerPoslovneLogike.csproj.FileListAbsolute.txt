@@ -1,0 +1,11 @@
+C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\bin\Debug\KontrolerPoslovneLogike.dll
+C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\bin\Debug\KontrolerPoslovneLogike.pdb
+C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\bin\Debug\Model.dll
+C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\bin\Debug\Session.dll
+C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\bin\Debug\Model.pdb
+C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\bin\Debug\Session.pdb
+C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\obj\Debug\KontrolerPoslovneLogike.csprojResolveAssemblyReference.cache
+C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\obj\Debug\KontrolerPoslovneLogike.csproj.CoreCompileInputs.cache
+C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\obj\Debug\KontrolerPoslovneLogike.csproj.CopyComplete
+C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\obj\Debug\KontrolerPoslovneLogike.dll
+C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\obj\Debug\KontrolerPoslovneLogike.pdb

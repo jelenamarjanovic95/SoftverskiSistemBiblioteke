@@ -1,0 +1,12 @@
+C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\Model\bin\Debug\Model.dll
+C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\Model\bin\Debug\Model.pdb
+C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\Model\obj\Debug\Model.dll
+C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\Model\obj\Debug\Model.pdb
+C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftverskiSistemBiblioteke\Model\bin\Debug\Model.dll
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftverskiSistemBiblioteke\Model\bin\Debug\Model.pdb
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftverskiSistemBiblioteke\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftverskiSistemBiblioteke\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftverskiSistemBiblioteke\Model\obj\Debug\Model.dll
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftverskiSistemBiblioteke\Model\obj\Debug\Model.pdb
