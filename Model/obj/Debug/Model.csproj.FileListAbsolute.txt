@@ -10,3 +10,9 @@ C:\Users\acoji\Desktop\Jelena\Softveri\SoftverskiSistemBiblioteke\Model\obj\Debu
 C:\Users\acoji\Desktop\Jelena\Softveri\SoftverskiSistemBiblioteke\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Users\acoji\Desktop\Jelena\Softveri\SoftverskiSistemBiblioteke\Model\obj\Debug\Model.dll
 C:\Users\acoji\Desktop\Jelena\Softveri\SoftverskiSistemBiblioteke\Model\obj\Debug\Model.pdb
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Model\bin\Debug\Model.dll
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Model\bin\Debug\Model.pdb
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Model\obj\Debug\Model.dll
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Model\obj\Debug\Model.pdb

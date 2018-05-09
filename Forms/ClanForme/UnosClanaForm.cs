@@ -47,11 +47,17 @@ namespace Forms
 
             try
             {
-                //int cb = Kontroler.UbaciClana(c);
                 int cb = Komunikacija.Instance.UbaciClana(c);
-                lblClanskiBroj.Text = cb.ToString();
-                MessageBox.Show($"Uspesno dodat novi clan! Clanski broj: {cb}");
-                OsveziFormu();
+                if (cb != -1)
+                {
+                    lblClanskiBroj.Text = cb.ToString();
+                    MessageBox.Show($"Uspesno dodat novi clan! Clanski broj: {cb}");
+                    OsveziFormu();
+                }
+                else
+                {
+                    MessageBox.Show("Ubacivanje clana nije bilo uspesno!");
+                }
             }
             catch (Exception)
             {

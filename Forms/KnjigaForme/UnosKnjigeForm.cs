@@ -36,7 +36,10 @@ namespace Forms
             {
                 //sledeciPrimerakID = Kontroler.DajPrimerakID();
                 sledeciPrimerakID = Komunikacija.Instance.DajPrimerakID();
-                txtPrimerakID.Text = sledeciPrimerakID.ToString();
+                if(sledeciPrimerakID != -1)
+                    txtPrimerakID.Text = sledeciPrimerakID.ToString();
+                else
+                    MessageBox.Show("Desila se greska prilikom uzimanja broja primerka!");
             }
             catch (Exception)
             {

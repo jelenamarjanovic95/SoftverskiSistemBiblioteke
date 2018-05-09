@@ -39,7 +39,7 @@ namespace Forms
 
         private void dgvZaduzenja_SelectionChanged(object sender, EventArgs e)
         {
-            if(dgvZaduzenja.SelectedCells.Count == 0)
+            if (dgvZaduzenja.SelectedCells.Count == 0)
             {
                 btnRazduzi.Hide();
                 return;
@@ -47,12 +47,12 @@ namespace Forms
             btnRazduzi.Show();
             btnRazduzi.Enabled = false;
             Zaduzenje z = clan.ListaZaduzenja[dgvZaduzenja.SelectedCells[0].RowIndex];
-            if(z.DatumDo == null)
+            if (z.DatumDo == null)
             {
                 btnRazduzi.Enabled = true;
             }
         }
-        
+
         private void btnRazduzi_Click(object sender, EventArgs e)
         {
             Zaduzenje z = clan.ListaZaduzenja[dgvZaduzenja.SelectedCells[0].RowIndex];
@@ -61,17 +61,23 @@ namespace Forms
             {
                 try
                 {
-                    Komunikacija.Instance.Razduzi(z);
-                    MessageBox.Show("Uspesno razduzena knjiga!");
-                    //spisakZaduzenja = new BindingList<Zaduzenje>(Kontroler.NadjiClana(clan.ClanskiBroj).ListaZaduzenja);
-                    spisakZaduzenja = new BindingList<Zaduzenje>(Komunikacija.Instance.NadjiClana(clan.ClanskiBroj).ListaZaduzenja);
+                    if (Komunikacija.Instance.Razduzi(z))
+                    {
+                        MessageBox.Show("Uspesno razduzena knjiga!");
+                        //spisakZaduzenja = new BindingList<Zaduzenje>(Kontroler.NadjiClana(clan.ClanskiBroj).ListaZaduzenja);
+                        spisakZaduzenja = new BindingList<Zaduzenje>(Komunikacija.Instance.NadjiClana(clan.ClanskiBroj).ListaZaduzenja);
 
-                    z.DatumDo = DateTime.Now.Date;
-                    dgvZaduzenja.DataSource = spisakZaduzenja;
+                        z.DatumDo = DateTime.Now.Date;
+                        dgvZaduzenja.DataSource = spisakZaduzenja;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Knjiga nije uspesno razduzena!");
+                    }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    MessageBox.Show("Desila se greska pri razduzivanju knjige!" + ex.Message);
+                    MessageBox.Show("Desila se greska pri razduzivanju knjige!");
                 }
 
             }

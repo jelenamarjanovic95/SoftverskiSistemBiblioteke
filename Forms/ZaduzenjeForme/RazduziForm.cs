@@ -70,10 +70,17 @@ namespace Forms
                 DialogResult dialog = MessageBox.Show("Da li ste sigurni da zelite da razduzite knjigu?", "Provera", MessageBoxButtons.YesNo);
                 if (dialog == DialogResult.Yes)
                 {
-                    Komunikacija.Instance.Razduzi(zaduzenje);
-                    lblPoruka.Text = "Razduzeno.";
-                    lblPoruka.ForeColor = Color.Green;
-                    OsveziFormu();
+                    if (Komunikacija.Instance.Razduzi(zaduzenje))
+                    {
+                        lblPoruka.Text = "Razduzeno.";
+                        lblPoruka.ForeColor = Color.Green;
+                        OsveziFormu();
+                    }
+                    else
+                    {
+                        lblPoruka.Text = "Nije uspesno razduzeno.";
+                        lblPoruka.ForeColor = Color.Red;
+                    }
                 }
             }
             catch (Exception)

@@ -13,8 +13,8 @@ namespace Session
         private static Broker instanca;
 
         OleDbConnection konekcija;
-        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\Baza.accdb";
-        //private string connStrIrc = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\gufs\Users$\marjanovic.jelena\Desktop\FON\Softveri\Baza.accdb;Persist Security Info=False";
+        //private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\Baza.accdb";
+        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\gufs\Users$\marjanovic.jelena\Documents\Projekat\Baza.accdb";
 
         OleDbCommand komanda;
         OleDbTransaction transakcija;

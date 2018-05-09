@@ -12,3 +12,17 @@ C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\Serve
 C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\Server_Console\obj\Debug\Server_Console.csproj.CopyComplete
 C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\Server_Console\obj\Debug\Server_Console.exe
 C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\Server_Console\obj\Debug\Server_Console.pdb
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Server_Console\bin\Debug\Server_Console.exe.config
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Server_Console\bin\Debug\Server_Console.exe
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Server_Console\bin\Debug\Server_Console.pdb
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Server_Console\bin\Debug\KontrolerPoslovneLogike.dll
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Server_Console\bin\Debug\Model.dll
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Server_Console\bin\Debug\Session.dll
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Server_Console\bin\Debug\KontrolerPoslovneLogike.pdb
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Server_Console\bin\Debug\Model.pdb
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Server_Console\bin\Debug\Session.pdb
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Server_Console\obj\Debug\Server_Console.csprojResolveAssemblyReference.cache
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Server_Console\obj\Debug\Server_Console.csproj.CoreCompileInputs.cache
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Server_Console\obj\Debug\Server_Console.csproj.CopyComplete
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Server_Console\obj\Debug\Server_Console.exe
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Server_Console\obj\Debug\Server_Console.pdb

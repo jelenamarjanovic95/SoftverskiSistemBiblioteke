@@ -58,9 +58,15 @@ namespace Forms
                 try
                 {
                     //Kontroler.SacuvajIzmeneKnjiga(knjiga);
-                    Komunikacija.Instance.SacuvajIzmeneKnjiga(knjiga);
-                    MessageBox.Show("Uspesno sacuvane promene!");
-                    this.Close();
+                    if (Komunikacija.Instance.SacuvajIzmeneKnjiga(knjiga))
+                    {
+                        MessageBox.Show("Uspesno sacuvane promene!");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Promene nisu uspesno sacuvane!");
+                    }
                 }
                 catch (Exception)
                 {

@@ -9,3 +9,14 @@ C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\Kontr
 C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\obj\Debug\KontrolerPoslovneLogike.csproj.CopyComplete
 C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\obj\Debug\KontrolerPoslovneLogike.dll
 C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\obj\Debug\KontrolerPoslovneLogike.pdb
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\bin\Debug\KontrolerPoslovneLogike.dll
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\bin\Debug\KontrolerPoslovneLogike.pdb
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\bin\Debug\Model.dll
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\bin\Debug\Session.dll
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\bin\Debug\Model.pdb
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\bin\Debug\Session.pdb
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\obj\Debug\KontrolerPoslovneLogike.csprojResolveAssemblyReference.cache
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\obj\Debug\KontrolerPoslovneLogike.csproj.CoreCompileInputs.cache
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\obj\Debug\KontrolerPoslovneLogike.csproj.CopyComplete
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\obj\Debug\KontrolerPoslovneLogike.dll
+\\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\obj\Debug\KontrolerPoslovneLogike.pdb

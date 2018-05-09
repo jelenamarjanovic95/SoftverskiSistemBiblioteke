@@ -83,11 +83,18 @@ namespace Forms
                 try
                 {
                     //Kontroler.ObrisiKnjigu(k);
-                    Komunikacija.Instance.ObrisiKnjigu(k);
+                    if (Komunikacija.Instance.ObrisiKnjigu(k))
+                    {
+                        MessageBox.Show("Uspesno obrisana knjiga!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nije moguce obrisati knjigu!");
+                    }
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Nije moguce obrisati knjigu!");
+                    MessageBox.Show("Desila se greska pri brisanju knjige!");
                 }
             }
             SakrijDugmice();

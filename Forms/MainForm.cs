@@ -24,7 +24,7 @@ namespace Forms
             try
             {
                 Komunikacija.Instance.PoveziSe();
-                MessageBox.Show("Uspesno povezan!");
+                //MessageBox.Show("Uspesno povezan!");
             }
             catch (Exception ex)
             {

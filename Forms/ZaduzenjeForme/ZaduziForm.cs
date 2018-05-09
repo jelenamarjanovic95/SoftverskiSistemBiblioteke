@@ -111,6 +111,11 @@ namespace Forms
                         lblPoruka.ForeColor = Color.Green;
                         OsveziFormu();
                     }
+                    else
+                    {
+                        lblPoruka.Text = "Nije uspesno zaduzeno.";
+                        lblPoruka.ForeColor = Color.Red;
+                    }
                 }
             }
             catch (Exception)
