@@ -17,10 +17,10 @@ namespace Server_Form
         static Socket serverSoket;
         static BinaryFormatter formater = new BinaryFormatter();
         static NetworkStream tok;
-        public static List<Socket> klijenti;
-        public static List<Bibliotekar> bibliotekari;
+        private static List<Socket> klijenti;
+        private static List<Bibliotekar> bibliotekari;
 
-        public static void PokreniServer()
+        public void PokreniServer()
         {
             serverSoket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             serverSoket.Bind(new IPEndPoint(IPAddress.Any, 21212));
@@ -318,7 +318,7 @@ namespace Server_Form
         //    }
         //}
 
-        public static void ObradiKlijenta()
+        public void ObradiKlijenta()
         {
             serverSoket.Listen(5);
 
@@ -328,11 +328,11 @@ namespace Server_Form
                 Console.WriteLine("Konektovan klijent broj: " + klijenti.Count());
                 tok = new NetworkStream(klijent);
                 klijenti.Add(klijent);
-                Klijent_Nit nit = new Klijent_Nit(tok, klijenti.Count);
+                Klijent_Nit nit = new Klijent_Nit(tok, klijenti, klijent);
             }
         }
 
-        public static void ZaustaviServer()
+        public void ZaustaviServer()
         {
             Console.WriteLine("Server je ugasen");
             serverSoket.Shutdown(SocketShutdown.Both);

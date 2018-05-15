@@ -13,16 +13,19 @@ namespace Server_Form
 {
     public class Klijent_Nit
     {
+        List<Socket> listaKlijenata;
+        Socket klijent;
         BinaryFormatter formater;
         NetworkStream tok;
         Bibliotekar b;
-        int indeks;
+        //int indeks;
 
-        public Klijent_Nit(NetworkStream tok, int indeks)
+        public Klijent_Nit(NetworkStream tok,List<Socket> k, Socket klij)
         {
             formater = new BinaryFormatter();
             this.tok = tok;
-            this.indeks = indeks - 1;
+            listaKlijenata = k;
+            klijent = klij;
 
             ThreadStart ts = ObradaPodataka;
             Thread nit = new Thread(ts);
@@ -318,9 +321,9 @@ namespace Server_Form
 
         private void PrekiniKonekciju()
         {
-            ServerForm.klijenti[indeks].Shutdown(SocketShutdown.Both);
-            ServerForm.klijenti[indeks].Close();
-            ServerForm.klijenti.RemoveAt(indeks);
+            //ServerForm.klijenti[indeks].Shutdown(SocketShutdown.Both);
+            //ServerForm.klijenti[indeks].Close();
+            //ServerForm.klijenti.RemoveAt(indeks);
         }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnPokreni = new System.Windows.Forms.Button();
-            this.btnUgasi = new System.Windows.Forms.Button();
+            this.btnZaustavi = new System.Windows.Forms.Button();
             this.dgvBibliotekari = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDiskonektuj = new System.Windows.Forms.Button();
@@ -47,15 +47,15 @@
             this.btnPokreni.UseVisualStyleBackColor = true;
             this.btnPokreni.Click += new System.EventHandler(this.btnPokreni_Click);
             // 
-            // btnUgasi
+            // btnZaustavi
             // 
-            this.btnUgasi.Location = new System.Drawing.Point(452, 25);
-            this.btnUgasi.Name = "btnUgasi";
-            this.btnUgasi.Size = new System.Drawing.Size(120, 43);
-            this.btnUgasi.TabIndex = 1;
-            this.btnUgasi.Text = "Zaustavi server";
-            this.btnUgasi.UseVisualStyleBackColor = true;
-            this.btnUgasi.Click += new System.EventHandler(this.btnUgasi_Click);
+            this.btnZaustavi.Location = new System.Drawing.Point(452, 25);
+            this.btnZaustavi.Name = "btnZaustavi";
+            this.btnZaustavi.Size = new System.Drawing.Size(120, 43);
+            this.btnZaustavi.TabIndex = 1;
+            this.btnZaustavi.Text = "Zaustavi server";
+            this.btnZaustavi.UseVisualStyleBackColor = true;
+            this.btnZaustavi.Click += new System.EventHandler(this.btnUgasi_Click);
             // 
             // dgvBibliotekari
             // 
@@ -90,13 +90,13 @@
             // 
             this.lblStanje.AutoSize = true;
             this.lblStanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStanje.Location = new System.Drawing.Point(170, 9);
+            this.lblStanje.Location = new System.Drawing.Point(218, 38);
             this.lblStanje.Name = "lblStanje";
             this.lblStanje.Size = new System.Drawing.Size(41, 15);
             this.lblStanje.TabIndex = 5;
             this.lblStanje.Text = "label2";
             // 
-            // Server
+            // ServerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -105,10 +105,11 @@
             this.Controls.Add(this.btnDiskonektuj);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvBibliotekari);
-            this.Controls.Add(this.btnUgasi);
+            this.Controls.Add(this.btnZaustavi);
             this.Controls.Add(this.btnPokreni);
-            this.Name = "Server";
+            this.Name = "ServerForm";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ServerForm_FormClosed);
             this.Load += new System.EventHandler(this.Server_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBibliotekari)).EndInit();
             this.ResumeLayout(false);
@@ -119,7 +120,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnPokreni;
-        private System.Windows.Forms.Button btnUgasi;
+        private System.Windows.Forms.Button btnZaustavi;
         private System.Windows.Forms.DataGridView dgvBibliotekari;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDiskonektuj;

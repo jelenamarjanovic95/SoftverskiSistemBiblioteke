@@ -8,7 +8,9 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Security.Permissions;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,6 +18,8 @@ namespace Server_Form
 {
     public partial class ServerForm : Form
     {
+        Thread nitServer;
+        Server s;
         Socket serverSoket;
         BinaryFormatter formater = new BinaryFormatter();
         NetworkStream tok;
@@ -32,60 +36,42 @@ namespace Server_Form
 
         private void btnPokreni_Click(object sender, EventArgs e)
         {
-            btnPokreni.Enabled = false;
-            btnUgasi.Enabled = true;
-            Server.PokreniServer();
+            try
+            {
+                s = new Server();
+                //ThreadStart ts = new ThreadStart(s.PokreniServer);
+                nitServer = new Thread(s.PokreniServer);
+                nitServer.Start();
+                btnPokreni.Enabled = false;
+                btnZaustavi.Enabled = true;
+                lblStanje.Text = "Server radi!";
+                lblStanje.ForeColor = Color.Green;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Nije moguce pokrenuti server!");
+            }
         }
 
         private void Server_Load(object sender, EventArgs e)
         {
-            btnUgasi.Enabled = false;
+            btnZaustavi.Enabled = false;
         }
 
         private void btnUgasi_Click(object sender, EventArgs e)
         {
-            btnPokreni.Enabled = true;
-            btnUgasi.Enabled = false;
-            Server.ZaustaviServer();
+            
         }
-        
-        public void PokreniServer()
+
+        private void ServerForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            serverSoket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            serverSoket.Bind(new IPEndPoint(IPAddress.Any, 21212));
-            Console.WriteLine("Server je uspesno startovan!");
-            klijenti = new List<Socket>();
-            bibliotekari = new List<Bibliotekar>();
-
-            lblStanje.Text = "Server je aktivan.";
-            lblStanje.ForeColor = Color.Green;
-
-            ObradiKlijenta();
 
         }
 
-        public void ObradiKlijenta()
+        [SecurityPermissionAttribute(SecurityAction.Demand, ControlThread = true)]
+        private void KillThread()
         {
-            serverSoket.Listen(5);
-
-            while (true)
-            {
-                Socket klijent = serverSoket.Accept();
-                Console.WriteLine("Konektovan klijent broj: " + klijenti.Count());
-                tok = new NetworkStream(klijent);
-                klijenti.Add(klijent);
-                Klijent_Nit nit = new Klijent_Nit(tok, klijenti.Count);
-            }
-        }
-
-        public void ZaustaviServer()
-        {
-            Console.WriteLine("Server je ugasen");
-            serverSoket.Shutdown(SocketShutdown.Both);
-            serverSoket.Close();
-
-            lblStanje.Text = "Server je ugasen.";
-            lblStanje.ForeColor = Color.Red;
+            nitServer.Abort();
         }
 
         //public void ugasiKlijenta()

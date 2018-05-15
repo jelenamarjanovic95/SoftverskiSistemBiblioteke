@@ -204,7 +204,7 @@
             // 
             this.lblPoruka.AutoSize = true;
             this.lblPoruka.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPoruka.Location = new System.Drawing.Point(383, 20);
+            this.lblPoruka.Location = new System.Drawing.Point(180, 560);
             this.lblPoruka.Name = "lblPoruka";
             this.lblPoruka.Size = new System.Drawing.Size(0, 13);
             this.lblPoruka.TabIndex = 3;
