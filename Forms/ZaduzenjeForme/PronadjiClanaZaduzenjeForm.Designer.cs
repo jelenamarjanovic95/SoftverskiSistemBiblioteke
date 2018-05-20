@@ -167,7 +167,7 @@
             this.ClientSize = new System.Drawing.Size(734, 426);
             this.Controls.Add(this.groupBox1);
             this.Name = "PronadjiClanaZaduzenjeForm";
-            this.Text = "PronadjiClanaZaduzenjeForm";
+            this.Text = "Odaberi clana";
             this.Load += new System.EventHandler(this.PronadjiClanaZaduzenjeForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

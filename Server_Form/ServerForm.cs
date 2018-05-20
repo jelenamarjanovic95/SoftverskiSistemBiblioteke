@@ -19,10 +19,10 @@ namespace Server_Form
     public partial class ServerForm : Form
     {
         Thread nitServer;
-        Server s;
-        Socket serverSoket;
-        BinaryFormatter formater = new BinaryFormatter();
-        NetworkStream tok;
+        Server server;
+        //Socket serverSoket;
+        //BinaryFormatter formater = new BinaryFormatter();
+        //NetworkStream tok;
         public static List<Socket> klijenti;
         public static List<Bibliotekar> bibliotekari;
 
@@ -38,10 +38,10 @@ namespace Server_Form
         {
             try
             {
-                s = new Server();
-                //ThreadStart ts = new ThreadStart(s.PokreniServer);
-                nitServer = new Thread(s.PokreniServer);
+                server = new Server();
+                nitServer = new Thread(server.PokreniServer);
                 nitServer.Start();
+
                 btnPokreni.Enabled = false;
                 btnZaustavi.Enabled = true;
                 lblStanje.Text = "Server radi!";
@@ -60,19 +60,14 @@ namespace Server_Form
 
         private void btnUgasi_Click(object sender, EventArgs e)
         {
-            
+            server.ZaustaviServer();
         }
 
         private void ServerForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            server.ZaustaviServer();
         }
-
-        [SecurityPermissionAttribute(SecurityAction.Demand, ControlThread = true)]
-        private void KillThread()
-        {
-            nitServer.Abort();
-        }
+        
 
         //public void ugasiKlijenta()
         //{

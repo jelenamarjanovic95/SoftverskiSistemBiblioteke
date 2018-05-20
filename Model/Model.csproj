@@ -43,6 +43,7 @@
     <Compile Include="Autor.cs" />
     <Compile Include="Bibliotekar.cs" />
     <Compile Include="Clan.cs" />
+    <Compile Include="IOpstiDomenskiObjekat.cs" />
     <Compile Include="Knjiga.cs" />
     <Compile Include="KnjigaPrimerak.cs" />
     <Compile Include="Pretraga.cs" />

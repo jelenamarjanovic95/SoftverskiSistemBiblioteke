@@ -1,18 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Model
 {
-    public enum KriterijumPretrageClan
-    {
-        ImePrezime,
-        ClanskiBroj
-    }
     [Serializable]
-    public class Clan
+    public class Clan : IOpstiDomenskiObjekat
     {
         private int clanskiBroj;
         private string imePrezime;
@@ -36,6 +32,26 @@ namespace Model
         public override string ToString()
         {
             return $"{clanskiBroj}: {imePrezime}";
+        }
+
+        public string VratiImeTabele()
+        {
+            return "Clan";
+        }
+
+        public string VratiKljucIUslov()
+        {
+            return $"ClanskiBroj = {clanskiBroj}";
+        }
+
+        public List<IOpstiDomenskiObjekat> VratiListu(OleDbDataReader citac)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string VratiVrednostiZaInsert()
+        {
+            throw new NotImplementedException();
         }
     }
 }

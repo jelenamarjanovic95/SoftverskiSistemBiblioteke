@@ -111,7 +111,7 @@
             this.Controls.Add(this.lblNazivKnjige);
             this.Controls.Add(this.groupBox1);
             this.Name = "PrimerciKnjigeForm";
-            this.Text = "PrimerciKnjigeForm";
+            this.Text = "Odaberi primerak";
             this.Load += new System.EventHandler(this.PrimerciKnjigeForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

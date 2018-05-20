@@ -26,3 +26,17 @@ C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\SoftverskiSistemBiblioteke\Serve
 \\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Server_Console\obj\Debug\Server_Console.csproj.CopyComplete
 \\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Server_Console\obj\Debug\Server_Console.exe
 \\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Server_Console\obj\Debug\Server_Console.pdb
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Server_Console\bin\Debug\Server_Console.exe.config
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Server_Console\bin\Debug\Server_Console.exe
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Server_Console\bin\Debug\Server_Console.pdb
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Server_Console\bin\Debug\KontrolerPoslovneLogike.dll
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Server_Console\bin\Debug\Model.dll
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Server_Console\bin\Debug\Session.dll
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Server_Console\bin\Debug\KontrolerPoslovneLogike.pdb
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Server_Console\bin\Debug\Model.pdb
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Server_Console\bin\Debug\Session.pdb
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Server_Console\obj\Debug\Server_Console.csprojResolveAssemblyReference.cache
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Server_Console\obj\Debug\Server_Console.csproj.CoreCompileInputs.cache
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Server_Console\obj\Debug\Server_Console.csproj.CopyComplete
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Server_Console\obj\Debug\Server_Console.exe
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Server_Console\obj\Debug\Server_Console.pdb

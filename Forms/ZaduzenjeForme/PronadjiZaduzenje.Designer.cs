@@ -184,7 +184,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "PronadjiZaduzenje";
-            this.Text = "PronadjiZaduzenje";
+            this.Text = "Pronadji zaduzenje";
             this.Load += new System.EventHandler(this.PronadjiZaduzenje_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

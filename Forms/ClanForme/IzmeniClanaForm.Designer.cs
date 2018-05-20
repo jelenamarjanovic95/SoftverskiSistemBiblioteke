@@ -92,6 +92,7 @@
             // 
             // txtClanskiBroj
             // 
+            this.txtClanskiBroj.Enabled = false;
             this.txtClanskiBroj.Location = new System.Drawing.Point(109, 31);
             this.txtClanskiBroj.Name = "txtClanskiBroj";
             this.txtClanskiBroj.Size = new System.Drawing.Size(191, 20);

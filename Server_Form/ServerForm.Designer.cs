@@ -92,9 +92,8 @@
             this.lblStanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStanje.Location = new System.Drawing.Point(218, 38);
             this.lblStanje.Name = "lblStanje";
-            this.lblStanje.Size = new System.Drawing.Size(41, 15);
+            this.lblStanje.Size = new System.Drawing.Size(0, 15);
             this.lblStanje.TabIndex = 5;
-            this.lblStanje.Text = "label2";
             // 
             // ServerForm
             // 
@@ -108,7 +107,7 @@
             this.Controls.Add(this.btnZaustavi);
             this.Controls.Add(this.btnPokreni);
             this.Name = "ServerForm";
-            this.Text = "Form1";
+            this.Text = "Server forma";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ServerForm_FormClosed);
             this.Load += new System.EventHandler(this.Server_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBibliotekari)).EndInit();

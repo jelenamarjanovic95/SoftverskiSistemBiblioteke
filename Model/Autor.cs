@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 namespace Model
 {
     [Serializable]
-    public class Autor
+    public class Autor : IOpstiDomenskiObjekat
     {
         private int autorID;
         private string imePrezime;
@@ -25,6 +26,40 @@ namespace Model
         public override string ToString()
         {
             return imePrezime;
+        }
+
+        public string VratiImeTabele()
+        {
+            return "Autor";
+        }
+
+        public string VratiKljucIUslov()
+        {
+            return "";
+        }
+
+        public List<IOpstiDomenskiObjekat> VratiListu(OleDbDataReader citac)
+        {
+            List<IOpstiDomenskiObjekat> listaAutora = new List<IOpstiDomenskiObjekat>();
+            while (citac.Read())
+            {
+                Autor a = new Autor()
+                {
+                    AutorID = Convert.ToInt32(citac["AutorID"]),
+                    Biografija = citac["Biografija"].ToString(),
+                    GodinaRodjenja = Convert.ToInt32(citac["GodinaRodjenja"]),
+                    ImePrezime = citac["ImePrezime"].ToString()
+                };
+
+                listaAutora.Add(a);
+            }
+
+            return listaAutora;
+        }
+
+        public string VratiVrednostiZaInsert()
+        {
+            return "";
         }
     }
 }

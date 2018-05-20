@@ -177,7 +177,7 @@
             this.ClientSize = new System.Drawing.Size(645, 437);
             this.Controls.Add(this.myPanel);
             this.Name = "PronadjiKnjiguZaduzenjeForm";
-            this.Text = "PronadjiKnjiguZaduzenjeForm";
+            this.Text = "Odaberi knjigu";
             this.Load += new System.EventHandler(this.PronadjiKnjiguZaduzenjeForm_Load);
             this.myPanel.ResumeLayout(false);
             this.gbPretraga.ResumeLayout(false);

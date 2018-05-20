@@ -25,3 +25,12 @@ C:\Users\acoji\Desktop\Jelena\Softveri\SoftverskiSistemBiblioteke\Session\obj\De
 \\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Session\obj\Debug\Session.csproj.CopyComplete
 \\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Session\obj\Debug\Session.dll
 \\gufs\Users$\marjanovic.jelena\Documents\Projekat\SoftverskiSistemBiblioteke\Session\obj\Debug\Session.pdb
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Session\bin\Debug\Session.dll
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Session\bin\Debug\Session.pdb
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Session\bin\Debug\Model.dll
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Session\bin\Debug\Model.pdb
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Session\obj\Debug\Session.csprojResolveAssemblyReference.cache
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Session\obj\Debug\Session.csproj.CoreCompileInputs.cache
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Session\obj\Debug\Session.csproj.CopyComplete
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Session\obj\Debug\Session.dll
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Session\obj\Debug\Session.pdb
