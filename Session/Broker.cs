@@ -10,6 +10,7 @@ namespace Session
 {
     public class Broker
     {
+        #region singleton
         private static Broker instanca;
 
         OleDbConnection konekcija;
@@ -40,6 +41,7 @@ namespace Session
             //konekcija = new OleDbConnection(connStrIrc);
             komanda = konekcija.CreateCommand();
         }
+        #endregion
 
         #region OsnovneFje
         public void PokreniTransakciju()
@@ -261,7 +263,6 @@ namespace Session
             {
                 return 1111;
             }
-
         }
 
         private List<Knjiga> NadjiKnjigePoAutoru(List<Knjiga> lista, string vrednostKriterijuma)
@@ -283,7 +284,6 @@ namespace Session
                         break;
                 }
             }
-
             return listaKnjiga;
         }
 

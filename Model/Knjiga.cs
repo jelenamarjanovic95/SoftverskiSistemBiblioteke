@@ -23,7 +23,7 @@ namespace Model
         private int godinaIzdanja;
         private int brojPrimeraka;
         private int raspolozivo;
-        
+
         private List<Autor> listaAutora;
         private List<KnjigaPrimerak> spisakPrimeraka;
 
@@ -64,15 +64,17 @@ namespace Model
         public int Raspolozivo { get => raspolozivo; set => raspolozivo = value; }
 
         public List<Autor> ListaAutora { get => listaAutora; set => listaAutora = value; }
-        public List<KnjigaPrimerak> SpisakPrimeraka {
+        public List<KnjigaPrimerak> SpisakPrimeraka
+        {
             get => spisakPrimeraka;
-            set {
+            set
+            {
                 spisakPrimeraka = value;
                 brojPrimeraka = spisakPrimeraka.Count;
                 raspolozivo = spisakPrimeraka.Count;
             }
         }
-       
+
         //TODO: Ime i prezime autora
         public override string ToString()
         {
@@ -89,9 +91,29 @@ namespace Model
             return $"KnjigaID = {KnjigaID}";
         }
 
+        //IDEJA: U sistemskoj operaciji, pozvacu prvo za knjigu da vrati sve, 
+        //pa onda za svaku knjigu, pravim listu primeraka novim pozivom brokera
         public List<IOpstiDomenskiObjekat> VratiListu(OleDbDataReader citac)
         {
-            throw new NotImplementedException();
+            List<IOpstiDomenskiObjekat> lista = new List<IOpstiDomenskiObjekat>();
+
+            while (citac.Read())
+            {
+                Knjiga k = new Knjiga()
+                {
+                    GodinaIzdanja = Convert.ToInt32(citac["GodinaIzdanja"]),
+                    Naziv = citac["Naziv"].ToString(),
+                    Opis = citac["Opis"].ToString(),
+                    KnjigaID = Convert.ToInt32(citac["KnjigaID"]),
+                    BrojPrimeraka = Convert.ToInt32(citac["BrojPrimeraka"]),
+                    Raspolozivo = Convert.ToInt32(citac["Raspolozivo"])
+                };
+
+                lista.Add(k);
+            }
+
+
+            return lista;
         }
 
         public string VratiVrednostiZaInsert()

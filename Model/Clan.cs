@@ -43,10 +43,25 @@ namespace Model
         {
             return $"ClanskiBroj = {clanskiBroj}";
         }
-
+        //TODO: PAKAO
         public List<IOpstiDomenskiObjekat> VratiListu(OleDbDataReader citac)
         {
-            throw new NotImplementedException();
+            List<IOpstiDomenskiObjekat> lista = new List<IOpstiDomenskiObjekat>();
+
+            while (citac.Read())
+            {
+                Clan c = new Clan()
+                {
+                    Adresa = citac["Adresa"].ToString(),
+                    BrojTelefona = citac["BrojTelefona"].ToString(),
+                    ImePrezime = citac["ImePrezime"].ToString(),
+                    ClanskiBroj = Convert.ToInt32(citac["ClanskiBroj"])
+                };
+                
+                lista.Add(c);
+            }
+
+            return lista;
         }
 
         public string VratiVrednostiZaInsert()

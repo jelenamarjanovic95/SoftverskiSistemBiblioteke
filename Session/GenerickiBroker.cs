@@ -72,6 +72,7 @@ namespace Session
         }
         #endregion
 
+        #region ProsteGenericke
         public int Insert(IOpstiDomenskiObjekat odo)
         {
             komanda.CommandText = $"Insert into {odo.VratiImeTabele()} values {odo.VratiVrednostiZaInsert()}";
@@ -100,9 +101,42 @@ namespace Session
             OleDbDataReader citac = komanda.ExecuteReader();
             return odo.VratiListu(citac);
         }
+        #endregion
 
         //TODO: MOZDA DA IMAM FUNKCIJU SLOZEN INSERT, SELECT NPR? on prima listu odo i onda nad svakim uradimo insert
         //TODO: Genericka metoda samo execute koja prima upit
-        
+
+            //OVO ZAPRAVO MOGU DA POZIVAM OVAKO U KONTROLERU
+        public void SlozenInsert(List<IOpstiDomenskiObjekat> odos)
+        {
+            foreach(IOpstiDomenskiObjekat odo in odos)
+            {
+                this.Insert(odo);
+            }
+        }
+
+        public void SlozenUpdate(List<IOpstiDomenskiObjekat> odos)
+        {
+            foreach (IOpstiDomenskiObjekat odo in odos)
+            {
+                this.Update(odo);
+            }
+        }
+
+        public void ExecuteNonQuery(string upit)
+        {
+            komanda.CommandText = upit;
+            komanda.CommandType = System.Data.CommandType.Text;
+            komanda.ExecuteNonQuery();
+        }
+
+        public List<IOpstiDomenskiObjekat> ExecuteReader(string upit, IOpstiDomenskiObjekat odo)
+        {
+            komanda.CommandText = upit;
+            komanda.CommandType = System.Data.CommandType.Text;
+            OleDbDataReader citac = komanda.ExecuteReader();
+            return odo.VratiListu(citac);
+        }
+
     }
 }
