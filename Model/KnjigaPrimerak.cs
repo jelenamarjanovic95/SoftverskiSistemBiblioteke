@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 namespace Model
 {
     [Serializable]
-    public class KnjigaPrimerak
+    public class KnjigaPrimerak : IOpstiDomenskiObjekat
     {
         private int primerakID;
         private bool raspoloziva;
@@ -28,6 +29,31 @@ namespace Model
         public override string ToString()
         {
             return $"{knjiga.Naziv}";
+        }
+
+        public string VratiImeTabele()
+        {
+            return "KnjigaPrimerak";
+        }
+
+        public string VratiKljucIUslov()
+        {
+            return $"KnjigaPrimerak.KnjigaID = {knjiga.KnjigaID} and PrimerakID = {PrimerakID}"; //Treba dodati i primerakID?
+        }
+
+        public List<IOpstiDomenskiObjekat> VratiListu(OleDbDataReader citac)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string VratiVrednostiZaInsert()
+        {
+            return $"{PrimerakID}, {knjiga.KnjigaID}, {Raspoloziva}";
+        }
+
+        public string VratiVrednostZaUpdate()
+        {
+            return $"Raspoloziva = {!raspoloziva}";
         }
     }
 }

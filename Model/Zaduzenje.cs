@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 namespace Model
 {
     [Serializable]
-    public class Zaduzenje
+    public class Zaduzenje : IOpstiDomenskiObjekat
     {
         private Clan clan;
         private KnjigaPrimerak knjigaPrimerak;
@@ -41,6 +42,31 @@ namespace Model
                 datdo = datumDo.Value.ToString("dd.MM.yyyy");
             }
             return $"Zaduzenje: {clan.ClanskiBroj} - {knjigaPrimerak.Knjiga.ToString()}, od {DatumOd.ToString("dd.MM.yyyy")}\nVracena: {datdo}";
+        }
+
+        public string VratiImeTabele()
+        {
+            return "Zaduzenje";
+        }
+
+        public string VratiKljucIUslov()
+        {
+            return $"ClanskiBroj = {Clan.ClanskiBroj} and PrimerakID = {KnjigaPrimerak.PrimerakID} and KnjigaID = {KnjigaPrimerak.Knjiga.KnjigaID} and DatumOd = #{DatumOd.ToString("dd-MMM-yyyy")}#";
+        }
+
+        public List<IOpstiDomenskiObjekat> VratiListu(OleDbDataReader citac)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string VratiVrednostiZaInsert()
+        {
+            return $"{Clan.ClanskiBroj}, {KnjigaPrimerak.Knjiga.KnjigaID}, {KnjigaPrimerak.PrimerakID}, '{DateTime.Now.ToShortDateString()}', NULL";
+        }
+
+        public string VratiVrednostZaUpdate()
+        {
+            return $"DatumDo = '{DateTime.Now.ToString("dd-MMM-yyyy")}'";
         }
     }
 }

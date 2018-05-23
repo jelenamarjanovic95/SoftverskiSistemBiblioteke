@@ -51,7 +51,12 @@ namespace Model
 
         public string VratiVrednostiZaInsert()
         {
-            throw new NotImplementedException();
+            return $"{ClanskiBroj}, '{ImePrezime}', '{Adresa}', '{BrojTelefona}'";
+        }
+
+        public string VratiVrednostZaUpdate()
+        {
+            return $"ImePrezime = '{ImePrezime}', BrojTelefona = '{BrojTelefona}', Adresa = '{Adresa}'";
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace Model
         KnjigaID
     }
     [Serializable]
-    public class Knjiga
+    public class Knjiga : IOpstiDomenskiObjekat
     {
         private int knjigaID;
         private string naziv;
@@ -72,12 +73,35 @@ namespace Model
             }
         }
        
-
-
         //TODO: Ime i prezime autora
         public override string ToString()
         {
             return $"{naziv}";
+        }
+
+        public string VratiImeTabele()
+        {
+            return "Knjiga";
+        }
+
+        public string VratiKljucIUslov()
+        {
+            return $"KnjigaID = {KnjigaID}";
+        }
+
+        public List<IOpstiDomenskiObjekat> VratiListu(OleDbDataReader citac)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string VratiVrednostiZaInsert()
+        {
+            return $"{knjigaID}, '{Naziv}', '{Opis}', {GodinaIzdanja}, {BrojPrimeraka}, {Raspolozivo}";
+        }
+
+        public string VratiVrednostZaUpdate()
+        {
+            return $"Naziv = '{Naziv}', Opis = '{Opis}', GodinaIzdanja = {GodinaIzdanja}";
         }
     }
 }

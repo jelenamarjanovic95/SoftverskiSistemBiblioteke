@@ -35,7 +35,7 @@ namespace Model
 
         public string VratiKljucIUslov()
         {
-            return "";
+            return $"AutorID = {AutorID}";
         }
 
         public List<IOpstiDomenskiObjekat> VratiListu(OleDbDataReader citac)
@@ -60,6 +60,11 @@ namespace Model
         public string VratiVrednostiZaInsert()
         {
             return "";
+        }
+
+        public string VratiVrednostZaUpdate()
+        {
+            throw new NotImplementedException();
         }
     }
 }

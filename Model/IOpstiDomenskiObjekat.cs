@@ -12,6 +12,7 @@ namespace Model
         string VratiImeTabele();
         string VratiKljucIUslov();
         string VratiVrednostiZaInsert();
+        string VratiVrednostZaUpdate();
         List<IOpstiDomenskiObjekat> VratiListu(OleDbDataReader citac);
     }
 }
