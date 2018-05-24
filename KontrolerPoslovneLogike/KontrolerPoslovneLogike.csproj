@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Kontroler.cs" />
+    <Compile Include="KontrolerPL_Generic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repozitorijum.cs" />
   </ItemGroup>

@@ -45,6 +45,7 @@
     <Compile Include="Clan.cs" />
     <Compile Include="IOpstiDomenskiObjekat.cs" />
     <Compile Include="Knjiga.cs" />
+    <Compile Include="KnjigaAutor.cs" />
     <Compile Include="KnjigaPrimerak.cs" />
     <Compile Include="Pretraga.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
