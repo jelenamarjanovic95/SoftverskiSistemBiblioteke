@@ -54,6 +54,10 @@
       <Project>{225aa739-751c-45fb-aba1-f4b5bcf1dd9f}</Project>
       <Name>Session</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SistemskeOperacije\SistemskeOperacije.csproj">
+      <Project>{46ce8e3d-9ca9-4583-bb9d-23a299d83170}</Project>
+      <Name>SistemskeOperacije</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

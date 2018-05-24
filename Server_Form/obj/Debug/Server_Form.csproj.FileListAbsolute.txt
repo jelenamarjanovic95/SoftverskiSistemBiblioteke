@@ -49,3 +49,5 @@ C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBibliote
 C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Server_Form\obj\Debug\Server_Form.csproj.CopyComplete
 C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Server_Form\obj\Debug\Server_Form.exe
 C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Server_Form\obj\Debug\Server_Form.pdb
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Server_Form\bin\Debug\SistemskeOperacije.dll
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\Server_Form\bin\Debug\SistemskeOperacije.pdb

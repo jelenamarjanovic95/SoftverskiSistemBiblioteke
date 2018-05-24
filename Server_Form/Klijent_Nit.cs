@@ -61,7 +61,8 @@ namespace Server_Form
                     case Operacija.VratiSveClanove:
                         try
                         {
-                            List<Clan> listaClanova = Kontroler.VratiSveClanove();
+                            //List<Clan> listaClanova = Kontroler.VratiSveClanove();
+                            List<Clan> listaClanova = KontrolerPL_Generic.VratiSveClanove();
                             odgovor.TransferObjekat = listaClanova;
                             odgovor.Signal = true;
                         }

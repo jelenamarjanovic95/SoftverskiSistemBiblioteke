@@ -1,0 +1,11 @@
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\SistemskeOperacije\bin\Debug\SistemskeOperacije.dll
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\SistemskeOperacije\bin\Debug\SistemskeOperacije.pdb
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\SistemskeOperacije\bin\Debug\Model.dll
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\SistemskeOperacije\bin\Debug\Session.dll
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\SistemskeOperacije\bin\Debug\Model.pdb
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\SistemskeOperacije\bin\Debug\Session.pdb
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\SistemskeOperacije\obj\Debug\SistemskeOperacije.csprojResolveAssemblyReference.cache
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\SistemskeOperacije\obj\Debug\SistemskeOperacije.csproj.CoreCompileInputs.cache
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\SistemskeOperacije\obj\Debug\SistemskeOperacije.csproj.CopyComplete
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\SistemskeOperacije\obj\Debug\SistemskeOperacije.dll
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\SistemskeOperacije\obj\Debug\SistemskeOperacije.pdb

@@ -31,3 +31,5 @@ C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBibliote
 C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\obj\Debug\KontrolerPoslovneLogike.csproj.CopyComplete
 C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\obj\Debug\KontrolerPoslovneLogike.dll
 C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\obj\Debug\KontrolerPoslovneLogike.pdb
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\bin\Debug\SistemskeOperacije.dll
+C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\SoftverskiSistemBiblioteke\KontrolerPoslovneLogike\bin\Debug\SistemskeOperacije.pdb

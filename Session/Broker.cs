@@ -91,12 +91,12 @@ namespace Session
                     ClanskiBroj = Convert.ToInt32(citac["ClanskiBroj"])
                 };
 
-                OleDbCommand komanda2 = konekcija.CreateCommand();
+               OleDbCommand komanda2 = konekcija.CreateCommand();
                 komanda2.CommandText = $"Select * from (Zaduzenje inner join KnjigaPrimerak on Zaduzenje.PrimerakID = KnjigaPrimerak.PrimerakID) " +
                     $"inner join Knjiga on KnjigaPrimerak.KnjigaID = Knjiga.KnjigaID where Zaduzenje.ClanskiBroj = {c.ClanskiBroj}";
                 komanda2.CommandType = System.Data.CommandType.Text;
                 OleDbDataReader citac2 = komanda2.ExecuteReader();
-
+                
                 #region zaduzenje
                 while (citac2.Read())
                 {

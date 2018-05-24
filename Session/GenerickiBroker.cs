@@ -99,7 +99,9 @@ namespace Session
             komanda.CommandText = $"Select * from {odo.VratiImeTabele()}";
             komanda.CommandType = System.Data.CommandType.Text;
             OleDbDataReader citac = komanda.ExecuteReader();
-            return odo.VratiListu(citac);
+            List<IOpstiDomenskiObjekat> lista =  odo.VratiListu(citac);
+            citac.Close();
+            return lista;
         }
         #endregion
 
@@ -137,6 +139,13 @@ namespace Session
             OleDbDataReader citac = komanda.ExecuteReader();
             return odo.VratiListu(citac);
         }
+
+        //public OleDbDataReader ExecuteReader(string upit)
+        //{
+        //    komanda.CommandText = upit;
+        //    komanda.CommandType = System.Data.CommandType.Text;
+        //    return komanda.ExecuteReader();
+        //}
 
     }
 }

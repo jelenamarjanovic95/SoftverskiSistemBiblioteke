@@ -33,7 +33,7 @@ namespace Model
         public override string ToString()
         {
             string datdo;
-            if(datumDo == null)
+            if (datumDo == null)
             {
                 datdo = "/";
             }
@@ -56,7 +56,38 @@ namespace Model
 
         public List<IOpstiDomenskiObjekat> VratiListu(OleDbDataReader citac)
         {
-            throw new NotImplementedException();
+            List<IOpstiDomenskiObjekat> lista = new List<IOpstiDomenskiObjekat>();
+
+            while (citac.Read())
+            {
+                Zaduzenje z = new Zaduzenje()
+                {
+                    DatumOd = Convert.ToDateTime(citac["DatumOd"]),
+                    KnjigaPrimerak = new KnjigaPrimerak()
+                    {
+                        PrimerakID = Convert.ToInt32(citac["Zaduzenje.PrimerakID"]),
+                        Raspoloziva = Convert.ToBoolean(citac["Raspoloziva"]),
+                        Knjiga = new Knjiga()
+                        {
+                            GodinaIzdanja = Convert.ToInt32(citac["GodinaIzdanja"]),
+                            Naziv = citac["Naziv"].ToString(),
+                            Opis = citac["Opis"].ToString(),
+                            KnjigaID = Convert.ToInt32(citac["Knjiga.KnjigaID"]),
+                            BrojPrimeraka = Convert.ToInt32(citac["BrojPrimeraka"]),
+                            Raspolozivo = Convert.ToInt32(citac["Raspolozivo"])
+                        }
+                    }
+                };
+                if (citac["DatumDo"] != DBNull.Value)
+                {
+                    z.DatumDo = Convert.ToDateTime(citac["DatumDo"]);
+                }
+
+                lista.Add(z);
+
+            }
+            citac.Close();
+            return lista;
         }
 
         public string VratiVrednostiZaInsert()
