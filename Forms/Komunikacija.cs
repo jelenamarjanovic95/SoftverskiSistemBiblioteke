@@ -148,6 +148,7 @@ namespace Forms
 
         public List<Clan> PretraziClanove(string vrednost, KriterijumPretrage kriterijum)
         {
+            List<Clan> listaPronadjenihClanova = new List<Clan>();
             TransferKlasa zahtev = new TransferKlasa()
             {
                 Operacija = Operacija.PretraziClanove,
@@ -161,7 +162,14 @@ namespace Forms
             TransferKlasa odgovor = formater.Deserialize(tok) as TransferKlasa;
 
             if (odgovor.Signal)
-                return odgovor.TransferObjekat as List<Clan>;
+            {
+                List<IOpstiDomenskiObjekat> lista = odgovor.TransferObjekat as List<IOpstiDomenskiObjekat>;
+                foreach (IOpstiDomenskiObjekat odo in lista)
+                {
+                    listaPronadjenihClanova.Add((Clan)odo);
+                }
+                return listaPronadjenihClanova;
+            }
             else return null;
         }
 

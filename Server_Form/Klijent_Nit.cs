@@ -241,7 +241,9 @@ namespace Server_Form
                             try
                             {
                                 Pretraga p = zahtevKlijenta.TransferObjekat as Pretraga;
-                                List<Clan> listaClanova = Kontroler.PretraziClanove(p.Vrednost, p.KriterijumPretrage);
+                                //List<Clan> listaClanova = Kontroler.PretraziClanove(p.Vrednost, p.KriterijumPretrage);
+                                List<IOpstiDomenskiObjekat> listaClanova = KontrolerPL_Generic.PretraziClanove(p);
+
                                 odgovor.TransferObjekat = listaClanova;
                                 odgovor.Signal = true;
                             }

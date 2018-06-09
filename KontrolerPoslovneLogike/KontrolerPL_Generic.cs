@@ -55,5 +55,21 @@ namespace KontrolerPoslovneLogike
             return c.ClanskiBroj;
         }
 
+        public static List<IOpstiDomenskiObjekat> PretraziClanove(Pretraga pretraga)
+        {
+            PretraziClanoveSO pretraziClanove;
+            if(pretraga.Vrednost == "")
+            {
+                return VratiSveClanove();
+            }
+
+            pretraziClanove = new PretraziClanoveSO();
+            pretraziClanove.Pretraga = pretraga;
+            bool rez = pretraziClanove.IzvrsiSO(new Clan());
+
+            if (rez)
+                return pretraziClanove.Rezultat as List<IOpstiDomenskiObjekat>;
+            else throw new Exception();
+        }
     }
 }

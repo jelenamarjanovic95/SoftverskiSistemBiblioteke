@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OpstaSistemskaOperacija.cs" />
+    <Compile Include="PretraziClanoveSO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SacuvajIzmeneClanSO.cs" />
     <Compile Include="UbaciClanaSO.cs" />
