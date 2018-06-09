@@ -61,7 +61,7 @@ namespace Forms
             {
                 try
                 {
-                    if (Komunikacija.Instance.Razduzi(z))
+                    if (KontrolerKorisnickogInterfejsa.Razduzi(z))
                     {
                         MessageBox.Show("Uspesno razduzena knjiga!");
                         //spisakZaduzenja = new BindingList<Zaduzenje>(Kontroler.NadjiClana(clan.ClanskiBroj).ListaZaduzenja);

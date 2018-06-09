@@ -64,6 +64,7 @@
       <DependentUpon>KnjigaViseInfoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Komunikacija.cs" />
+    <Compile Include="KontrolerKorisnickogInterfejsa.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

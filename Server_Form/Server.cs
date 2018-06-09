@@ -19,6 +19,7 @@ namespace Server_Form
         static NetworkStream tok;
         private static List<Socket> klijenti;
         private static List<Bibliotekar> bibliotekari;
+        private static List<Klijent_Nit> klijentNiti = new List<Klijent_Nit>();
 
         public void PokreniServer()
         {
@@ -322,22 +323,40 @@ namespace Server_Form
         {
             serverSoket.Listen(5);
 
-            while (true)
+            try
             {
-                Socket klijent = serverSoket.Accept();
-                Console.WriteLine("Konektovan klijent broj: " + klijenti.Count());
-                tok = new NetworkStream(klijent);
-                klijenti.Add(klijent);
-                Klijent_Nit nit = new Klijent_Nit(tok, klijenti, klijent);
+                while (true)
+                {
+                    Socket klijent = serverSoket.Accept();
+                    Console.WriteLine("Konektovan klijent broj: " + klijenti.Count());
+                    tok = new NetworkStream(klijent);
+                    klijenti.Add(klijent);
+                    Klijent_Nit nit = new Klijent_Nit(tok, klijenti, klijent);
+                    klijentNiti.Add(nit);
+                }
+            }
+            catch (Exception)
+            {
+                
             }
         }
 
         public void ZaustaviServer()
         {
             Console.WriteLine("Server je ugasen");
-            serverSoket.Shutdown(SocketShutdown.Both);
+            //serverSoket.Shutdown(SocketShutdown.Both);
+            UgasiSveKlijente();
             serverSoket.Close();
         }
+
+        private void UgasiSveKlijente()
+        {
+            foreach(Klijent_Nit kn in klijentNiti)
+            {
+                kn.UgasiKlijenta();
+            }
+        }
+
         
         //public void ugasiKlijenta()
         //{

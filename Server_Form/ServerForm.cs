@@ -61,6 +61,10 @@ namespace Server_Form
         private void btnUgasi_Click(object sender, EventArgs e)
         {
             server.ZaustaviServer();
+            lblStanje.Text = "Server je ugasen.";
+            lblStanje.ForeColor = Color.Red;
+            btnZaustavi.Enabled = false;
+            btnPokreni.Enabled = true;
         }
 
         private void ServerForm_FormClosed(object sender, FormClosedEventArgs e)

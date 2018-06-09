@@ -14,7 +14,6 @@ namespace Forms
 {
     public partial class LoginForm : Form
     {
-        private List<Bibliotekar> bibliotekari;
         private Bibliotekar bibl;
 
         public Bibliotekar Bibl { get => bibl; set => bibl = value; }
@@ -23,16 +22,6 @@ namespace Forms
         {
             InitializeComponent();
 
-            bibliotekari = new List<Bibliotekar>()
-            {
-                new Bibliotekar()
-                {
-                    Ime = "Jelena",
-                    KorisnickoIme = "j",
-                    Lozinka = "j",
-                    Prezime = "Marjanovic"
-                }
-            };
         }
 
         private void OsveziFormu()
@@ -52,12 +41,13 @@ namespace Forms
                 OsveziFormu();
                 return;
             }
+
             string korisnickoIme = txtKorisnickoIme.Text;
             string lozinka = txtLozinka.Text;
 
-            //bibl = Kontroler.Login(korisnickoIme, lozinka);
-            bibl = Komunikacija.Instance.PrijaviSe(korisnickoIme, lozinka);
-            if (bibl != null)
+            //Bibl = Komunikacija.Instance.PrijaviSe(korisnickoIme, lozinka);
+            KontrolerKorisnickogInterfejsa.PrijaviSe(korisnickoIme, lozinka, this);
+            if (Bibl != null)
             {
                 this.DialogResult = DialogResult.OK;
                 this.Dispose();
