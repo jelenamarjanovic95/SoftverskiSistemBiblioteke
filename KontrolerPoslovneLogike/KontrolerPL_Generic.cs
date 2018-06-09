@@ -10,7 +10,6 @@ namespace KontrolerPoslovneLogike
 {
     public class KontrolerPL_Generic
     {
-        //Nece da se konvertuje u listu!
         public static List<IOpstiDomenskiObjekat> VratiSveClanove()
         {
             OpstaSistemskaOperacija vratiClanove = new VratiSveClanoveSO();
@@ -19,6 +18,8 @@ namespace KontrolerPoslovneLogike
                 return vratiClanove.Rezultat as List<IOpstiDomenskiObjekat>;
             else throw new Exception();
         }
+
+
 
 
     }

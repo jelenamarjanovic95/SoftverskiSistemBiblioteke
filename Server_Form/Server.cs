@@ -20,6 +20,14 @@ namespace Server_Form
         private static List<Socket> klijenti;
         private static List<Bibliotekar> bibliotekari;
         private static List<Klijent_Nit> klijentNiti = new List<Klijent_Nit>();
+        ServerForm forma;
+
+        public List<Bibliotekar> Bibliotekari { get => bibliotekari; set => bibliotekari = value; }
+
+        public Server(ServerForm sf)
+        {
+            this.forma = sf;
+        }
 
         public void PokreniServer()
         {
@@ -27,7 +35,7 @@ namespace Server_Form
             serverSoket.Bind(new IPEndPoint(IPAddress.Any, 21212));
             Console.WriteLine("Server je uspesno startovan!");
             klijenti = new List<Socket>();
-            bibliotekari = new List<Bibliotekar>();
+            Bibliotekari = new List<Bibliotekar>();
             ObradiKlijenta();
         }
 
@@ -331,7 +339,8 @@ namespace Server_Form
                     Console.WriteLine("Konektovan klijent broj: " + klijenti.Count());
                     tok = new NetworkStream(klijent);
                     klijenti.Add(klijent);
-                    Klijent_Nit nit = new Klijent_Nit(tok, klijenti, klijent);
+                    Klijent_Nit nit = new Klijent_Nit(tok, klijenti, klijent, forma);
+                    nit.NoviBibliotekar += UnesenNovBibliotekar;
                     klijentNiti.Add(nit);
                 }
             }
@@ -341,12 +350,19 @@ namespace Server_Form
             }
         }
 
+        private void UnesenNovBibliotekar(Bibliotekar b)
+        {
+            bibliotekari.Add(b);
+            this.forma.OsveziDgv();
+        }
+
         public void ZaustaviServer()
         {
             Console.WriteLine("Server je ugasen");
-            //serverSoket.Shutdown(SocketShutdown.Both);
+            bibliotekari.Clear();
             UgasiSveKlijente();
             serverSoket.Close();
+            forma.OsveziDgv();
         }
 
         private void UgasiSveKlijente()

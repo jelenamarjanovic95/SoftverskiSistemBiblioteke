@@ -27,6 +27,8 @@ namespace KontrolerPoslovneLogike
             }
         };
 
+        public List<Bibliotekar> UlogovaniBibliotekari { get; set; }
+
         public static Bibliotekar NadjiBibliotekara(string korisnickoIme, string lozinka)
         {
             foreach (Bibliotekar b in ListaBibliotekara)

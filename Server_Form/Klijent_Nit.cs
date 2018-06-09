@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace Server_Form
 {
+    public delegate void noviBiblDelegat(Bibliotekar b);
     public class Klijent_Nit
     {
         List<Socket> listaKlijenata;
@@ -20,9 +21,14 @@ namespace Server_Form
         Bibliotekar b;
         bool kraj = false;
 
-        public Klijent_Nit(NetworkStream tok,List<Socket> k, Socket klij)
+        ServerForm forma;
+
+        public event noviBiblDelegat NoviBibliotekar;
+
+        public Klijent_Nit(NetworkStream tok,List<Socket> k, Socket klij, ServerForm sf)
         {
             formater = new BinaryFormatter();
+            forma = sf;
             this.tok = tok;
             listaKlijenata = k;
             klijent = klij;
@@ -46,10 +52,11 @@ namespace Server_Form
                         case Operacija.Login:
                             try
                             {
-                                Bibliotekar b = zahtevKlijenta.TransferObjekat as Bibliotekar;
-                                odgovor.TransferObjekat = Kontroler.Login(b.KorisnickoIme, b.Lozinka);
+                                Bibliotekar bibl = zahtevKlijenta.TransferObjekat as Bibliotekar;
+                                b = Kontroler.Login(bibl.KorisnickoIme, bibl.Lozinka);
+                                odgovor.TransferObjekat = b;
                                 odgovor.Signal = true;
-                                this.b = b;
+                                NoviBibliotekar.Invoke(b);
                             }
                             catch (Exception e)
                             {

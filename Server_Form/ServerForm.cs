@@ -24,7 +24,7 @@ namespace Server_Form
         //BinaryFormatter formater = new BinaryFormatter();
         //NetworkStream tok;
         public static List<Socket> klijenti;
-        public static List<Bibliotekar> bibliotekari;
+        public static List<Bibliotekar> bibliotekari = new List<Bibliotekar>();
 
         public ServerForm()
         {
@@ -38,7 +38,7 @@ namespace Server_Form
         {
             try
             {
-                server = new Server();
+                server = new Server(this);
                 nitServer = new Thread(server.PokreniServer);
                 nitServer.Start();
 
@@ -72,6 +72,17 @@ namespace Server_Form
             server.ZaustaviServer();
         }
         
+        internal void OsveziDgv()
+        {
+            Invoke(new Action(OsveziFormu));
+        }
+
+        private void OsveziFormu()
+        {
+            dgvBibliotekari.DataSource = null;
+            dgvBibliotekari.DataSource = server.Bibliotekari;
+            dgvBibliotekari.Refresh();
+        }
 
         //public void ugasiKlijenta()
         //{
