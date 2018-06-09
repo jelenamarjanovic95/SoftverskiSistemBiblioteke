@@ -137,7 +137,9 @@ namespace Session
             komanda.CommandText = upit;
             komanda.CommandType = System.Data.CommandType.Text;
             OleDbDataReader citac = komanda.ExecuteReader();
-            return odo.VratiListu(citac);
+            List<IOpstiDomenskiObjekat> lista = odo.VratiListu(citac);
+            citac.Close();
+            return lista;
         }
 
         //public OleDbDataReader ExecuteReader(string upit)

@@ -45,7 +45,7 @@ namespace Model
             {
                 Autor a = new Autor()
                 {
-                    AutorID = Convert.ToInt32(citac["AutorID"]),
+                    AutorID = Convert.ToInt32(citac["Autor.AutorID"]),
                     Biografija = citac["Biografija"].ToString(),
                     GodinaRodjenja = Convert.ToInt32(citac["GodinaRodjenja"]),
                     ImePrezime = citac["ImePrezime"].ToString()

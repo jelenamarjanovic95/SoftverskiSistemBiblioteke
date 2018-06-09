@@ -86,7 +86,6 @@ namespace Model
                 lista.Add(z);
 
             }
-            citac.Close();
             return lista;
         }
 
