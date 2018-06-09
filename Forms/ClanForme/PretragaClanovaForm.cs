@@ -76,7 +76,6 @@ namespace Forms
 
                 try
                 {
-                    //Kontroler.ObrisiClana(c);
                     if (Komunikacija.Instance.ObrisiClana(c))
                     {
                         MessageBox.Show("Uspesno obrisan clan!");
@@ -84,14 +83,13 @@ namespace Forms
                     }
                     else
                     {
-                        MessageBox.Show("Clan nije uspesno obrisan!");
+                        MessageBox.Show("Nije moguce obrisati odabranog clana!");
                     }
                 }
                 catch (Exception)
                 {
                     MessageBox.Show("Nije moguce obrisati odabranog clana!");
                 }
-                //pronadjeniClanovi.Remove(c);
             }
             SakrijDugmice();
         }

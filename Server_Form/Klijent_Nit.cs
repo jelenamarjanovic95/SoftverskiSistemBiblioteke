@@ -275,7 +275,8 @@ namespace Server_Form
                         case Operacija.ObrisiClana:
                             try
                             {
-                                Kontroler.ObrisiClana(zahtevKlijenta.TransferObjekat as Clan);
+                                KontrolerPL_Generic.ObrisiClana(zahtevKlijenta.TransferObjekat as Clan);
+                                //Kontroler.ObrisiClana(zahtevKlijenta.TransferObjekat as Clan);
                                 odgovor.Signal = true;
                             }
                             catch (Exception)

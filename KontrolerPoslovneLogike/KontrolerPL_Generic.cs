@@ -85,5 +85,12 @@ namespace KontrolerPoslovneLogike
                 return nadjiClana.Rezultat as Clan;
             else throw new Exception();
         }
+
+        public static void ObrisiClana(Clan c)
+        {
+            OpstaSistemskaOperacija obrisiClana = new ObrisiClanaSO();
+            bool rez = obrisiClana.IzvrsiSO(c);
+            if (!rez) throw new Exception();
+        }
     }
 }
