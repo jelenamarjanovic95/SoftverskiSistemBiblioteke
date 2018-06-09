@@ -85,6 +85,7 @@
             this.btnDiskonektuj.TabIndex = 4;
             this.btnDiskonektuj.Text = "Diskonektuj bibliotekara";
             this.btnDiskonektuj.UseVisualStyleBackColor = true;
+            this.btnDiskonektuj.Click += new System.EventHandler(this.btnDiskonektuj_Click);
             // 
             // lblStanje
             // 

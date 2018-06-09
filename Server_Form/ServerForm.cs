@@ -84,6 +84,13 @@ namespace Server_Form
             dgvBibliotekari.Refresh();
         }
 
+        private void btnDiskonektuj_Click(object sender, EventArgs e)
+        {
+            server.DiskonektujKlijenta(dgvBibliotekari.SelectedCells[0].RowIndex);
+            //TODO: message box! yes no
+            //TODO: Obavesti klijenta da je diskonektovan
+        }
+
         //public void ugasiKlijenta()
         //{
         //    while (true)

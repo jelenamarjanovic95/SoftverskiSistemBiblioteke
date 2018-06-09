@@ -373,7 +373,13 @@ namespace Server_Form
             }
         }
 
-        
+        public void DiskonektujKlijenta(int index)
+        {
+            klijentNiti[index].UgasiKlijenta();
+            bibliotekari.RemoveAt(index);
+            forma.OsveziDgv();
+        }
+
         //public void ugasiKlijenta()
         //{
         //    while (true)
