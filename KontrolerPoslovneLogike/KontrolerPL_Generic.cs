@@ -58,7 +58,7 @@ namespace KontrolerPoslovneLogike
         public static List<IOpstiDomenskiObjekat> PretraziClanove(Pretraga pretraga)
         {
             PretraziClanoveSO pretraziClanove;
-            if(pretraga.Vrednost == "")
+            if (pretraga.Vrednost == "")
             {
                 return VratiSveClanove();
             }
@@ -69,6 +69,20 @@ namespace KontrolerPoslovneLogike
 
             if (rez)
                 return pretraziClanove.Rezultat as List<IOpstiDomenskiObjekat>;
+            else throw new Exception();
+        }
+
+        public static Clan NadjiClana(int clanskiBroj)
+        {
+            Clan c = new Clan()
+            {
+                ClanskiBroj = clanskiBroj
+            };
+            OpstaSistemskaOperacija nadjiClana = new NadjiClanaSO();
+            bool rez = nadjiClana.IzvrsiSO(c);
+
+            if (rez)
+                return nadjiClana.Rezultat as Clan;
             else throw new Exception();
         }
     }

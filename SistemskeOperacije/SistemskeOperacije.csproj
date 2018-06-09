@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NadjiClanaSO.cs" />
     <Compile Include="OpstaSistemskaOperacija.cs" />
     <Compile Include="PretraziClanoveSO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

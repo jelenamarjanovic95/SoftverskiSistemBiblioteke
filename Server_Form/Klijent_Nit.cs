@@ -258,7 +258,9 @@ namespace Server_Form
                         case Operacija.NadjiClana:
                             try
                             {
-                                Clan c = Kontroler.NadjiClana((int)zahtevKlijenta.TransferObjekat);
+                                //Clan c = Kontroler.NadjiClana((int)zahtevKlijenta.TransferObjekat);
+                                Clan c = KontrolerPL_Generic.NadjiClana((int)zahtevKlijenta.TransferObjekat);
+
                                 odgovor.TransferObjekat = c;
                                 odgovor.Signal = true;
                             }
