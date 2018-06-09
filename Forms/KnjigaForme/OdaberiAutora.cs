@@ -53,19 +53,28 @@ namespace Forms
 
         private void SpisakOstaliAutori(BindingList<Autor> odabraniAutori)
         {
-            foreach(Autor a in Komunikacija.Instance.VratiSveAutore())
+
+            try
             {
-                bool nalazi = false;
-                foreach(Autor aa in odabraniAutori)
+                foreach (Autor a in Komunikacija.Instance.VratiSveAutore())
                 {
-                    if(aa.AutorID == a.AutorID)
+                    bool nalazi = false;
+                    foreach (Autor aa in odabraniAutori)
                     {
-                        nalazi = true;
-                        break;
+                        if (aa.AutorID == a.AutorID)
+                        {
+                            nalazi = true;
+                            break;
+                        }
                     }
+                    if (!nalazi)
+                        spisakAutora.Add(a);
                 }
-                if (!nalazi)
-                    spisakAutora.Add(a);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Desila se greska prilikom pretrage autora!");
+                this.Dispose();
             }
         }
 

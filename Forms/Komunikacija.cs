@@ -209,6 +209,7 @@ namespace Forms
 
         public List<Autor> VratiSveAutore()
         {
+            List<Autor> listaAutora = new List<Autor>();
             TransferKlasa zahtev = new TransferKlasa()
             {
                 Operacija = Operacija.VratiSveAutore
@@ -217,7 +218,14 @@ namespace Forms
             TransferKlasa odgovor = formater.Deserialize(tok) as TransferKlasa;
 
             if (odgovor.Signal)
-                return odgovor.TransferObjekat as List<Autor>;
+            {
+                List<IOpstiDomenskiObjekat> lista = odgovor.TransferObjekat as List<IOpstiDomenskiObjekat>;
+                foreach (IOpstiDomenskiObjekat odo in lista)
+                {
+                    listaAutora.Add((Autor)odo);
+                }
+                return listaAutora;
+            }
             else return null;
         }
 

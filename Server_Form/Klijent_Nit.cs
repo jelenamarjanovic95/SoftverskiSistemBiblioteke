@@ -102,7 +102,9 @@ namespace Server_Form
                         case Operacija.VratiSveAutore:
                             try
                             {
-                                List<Autor> listaAutora = Kontroler.VratiSveAutore();
+                                //List<Autor> listaAutora = Kontroler.VratiSveAutore();
+                                List<IOpstiDomenskiObjekat> listaAutora = KontrolerPL_Generic.VratiSveAutore();
+
                                 odgovor.TransferObjekat = listaAutora;
                                 odgovor.Signal = true;
                             }

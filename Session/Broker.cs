@@ -229,7 +229,6 @@ namespace Session
             komanda.CommandText = "Select * from Autor order by ImePrezime ASC";
             komanda.CommandType = System.Data.CommandType.Text;
             
-
             OleDbDataReader citac = komanda.ExecuteReader();
             while (citac.Read())
             {

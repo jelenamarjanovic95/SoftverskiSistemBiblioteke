@@ -29,15 +29,15 @@ namespace SistemskeOperacije
                         k.SpisakPrimeraka.Add(lp as KnjigaPrimerak);
                     }
 
-                    upit = $"Select * from Autor inner join KnjigaAutor on Autor.AutorID = KnjigaAutor.AutorID where KnjigaAutor.KnjigaID = {k.KnjigaID}";
+                    //upit = $"Select * from Autor inner join KnjigaAutor on Autor.AutorID = KnjigaAutor.AutorID where KnjigaAutor.KnjigaID = {k.KnjigaID}";
 
-                    List<IOpstiDomenskiObjekat> listaAutora = GenerickiBroker.Instanca.ExecuteReader(upit, new Autor());
+                    //List<IOpstiDomenskiObjekat> listaAutora = GenerickiBroker.Instanca.ExecuteReader(upit, new Autor());
 
-                    foreach (IOpstiDomenskiObjekat autor in listaAutora)
-                    {
-                        Autor a = autor as Autor;
-                        k.ListaAutora.Add(a);
-                    }
+                    //foreach (IOpstiDomenskiObjekat autor in listaAutora)
+                    //{
+                    //    Autor a = autor as Autor;
+                    //    k.ListaAutora.Add(a);
+                    //}
 
                 }
                 Rezultat = listaKnjiga;

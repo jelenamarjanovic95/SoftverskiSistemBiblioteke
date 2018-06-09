@@ -28,6 +28,14 @@ namespace KontrolerPoslovneLogike
             else throw new Exception();
         }
 
+        public static List<IOpstiDomenskiObjekat> VratiSveAutore()
+        {
+            OpstaSistemskaOperacija vratiAutore = new VratiSveAutoreSO();
+            bool rez = vratiAutore.IzvrsiSO(new Autor());
+            if (rez)
+                return vratiAutore.Rezultat as List<IOpstiDomenskiObjekat>;
+            else throw new Exception();
+        }
 
     }
 }
