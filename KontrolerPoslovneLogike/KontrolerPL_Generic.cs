@@ -37,5 +37,14 @@ namespace KontrolerPoslovneLogike
             else throw new Exception();
         }
 
+        public static bool SacuvajIzmeneClan(Clan novi)
+        {
+            OpstaSistemskaOperacija sacuvajIzmeneClan = new SacuvajIzmeneClanSO();
+
+            bool rez = sacuvajIzmeneClan.IzvrsiSO(novi);
+
+            return rez;
+        }
+
     }
 }

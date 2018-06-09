@@ -11,7 +11,7 @@ namespace Session
     public class GenerickiBroker
     {
         private OleDbConnection konekcija;
-        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\acoji\Desktop\Jelena\Softveri\Projekat\Baza.accdb";
+        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\acoji\Desktop\Jelena\Softveri\SoftveriProjekat\Baza.accdb";
         //private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\gufs\Users$\marjanovic.jelena\Documents\Projekat\Baza.accdb";
 
         private OleDbCommand komanda;
@@ -38,7 +38,6 @@ namespace Session
         void KonektujSe()
         {
             konekcija = new OleDbConnection(connectionString);
-            //konekcija = new OleDbConnection(connStrIrc);
             komanda = konekcija.CreateCommand();
         }
         #endregion
@@ -105,10 +104,7 @@ namespace Session
         }
         #endregion
 
-        //TODO: MOZDA DA IMAM FUNKCIJU SLOZEN INSERT, SELECT NPR? on prima listu odo i onda nad svakim uradimo insert
-        //TODO: Genericka metoda samo execute koja prima upit
-
-            //OVO ZAPRAVO MOGU DA POZIVAM OVAKO U KONTROLERU
+       
         public void SlozenInsert(List<IOpstiDomenskiObjekat> odos)
         {
             foreach(IOpstiDomenskiObjekat odo in odos)

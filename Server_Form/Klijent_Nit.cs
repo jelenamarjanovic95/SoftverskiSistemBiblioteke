@@ -208,8 +208,9 @@ namespace Server_Form
                         case Operacija.SacuvajIzmeneClan:
                             try
                             {
-                                Kontroler.SacuvajIzmeneClan(zahtevKlijenta.TransferObjekat as Clan);
-                                odgovor.Signal = true;
+                                //Kontroler.SacuvajIzmeneClan(zahtevKlijenta.TransferObjekat as Clan);
+                                odgovor.Signal = KontrolerPL_Generic.SacuvajIzmeneClan(zahtevKlijenta.TransferObjekat as Clan);
+                                
                             }
                             catch (Exception e)
                             {

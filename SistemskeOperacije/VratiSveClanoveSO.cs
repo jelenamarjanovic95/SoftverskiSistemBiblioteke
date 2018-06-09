@@ -28,16 +28,16 @@ namespace SistemskeOperacije
                     {
                         Zaduzenje z = zaduzenje as Zaduzenje;
                         z.Clan = c;
-                        upit = $"Select * from Autor inner join KnjigaAutor on Autor.AutorID = KnjigaAutor.AutorID where KnjigaAutor.KnjigaID = {z.KnjigaPrimerak.Knjiga.KnjigaID}";
+                        //upit = $"Select * from Autor inner join KnjigaAutor on Autor.AutorID = KnjigaAutor.AutorID where KnjigaAutor.KnjigaID = {z.KnjigaPrimerak.Knjiga.KnjigaID}";
 
-                        List<IOpstiDomenskiObjekat> listaAutora = GenerickiBroker.Instanca.ExecuteReader(upit, new Autor());
+                        //List<IOpstiDomenskiObjekat> listaAutora = GenerickiBroker.Instanca.ExecuteReader(upit, new Autor());
 
-                        foreach(IOpstiDomenskiObjekat autor in listaAutora)
-                        {
-                            Autor a = autor as Autor;
-                            z.KnjigaPrimerak.Knjiga.ListaAutora.Add(a);
+                        //foreach(IOpstiDomenskiObjekat autor in listaAutora)
+                        //{
+                        //    Autor a = autor as Autor;
+                        //    z.KnjigaPrimerak.Knjiga.ListaAutora.Add(a);
 
-                        }
+                        //}
 
                         c.ListaZaduzenja.Add(z);
                     }
