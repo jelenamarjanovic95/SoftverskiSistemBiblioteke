@@ -223,7 +223,9 @@ namespace Server_Form
                         case Operacija.UbaciClana:
                             try
                             {
-                                int cb = Kontroler.UbaciClana(zahtevKlijenta.TransferObjekat as Clan);
+                                //int cb = Kontroler.UbaciClana(zahtevKlijenta.TransferObjekat as Clan);
+                                int cb = KontrolerPL_Generic.UbaciClana(zahtevKlijenta.TransferObjekat as Clan);
+
                                 odgovor.TransferObjekat = cb;
                                 odgovor.Signal = true;
                             }

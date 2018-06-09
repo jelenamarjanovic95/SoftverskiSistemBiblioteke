@@ -43,7 +43,7 @@ namespace Model
         {
             return $"ClanskiBroj = {clanskiBroj}";
         }
-        //TODO: PAKAO
+
         public List<IOpstiDomenskiObjekat> VratiListu(OleDbDataReader citac)
         {
             List<IOpstiDomenskiObjekat> lista = new List<IOpstiDomenskiObjekat>();

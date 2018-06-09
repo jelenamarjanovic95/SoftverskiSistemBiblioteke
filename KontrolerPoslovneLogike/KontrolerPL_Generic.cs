@@ -1,4 +1,5 @@
 ﻿using Model;
+using Session;
 using SistemskeOperacije;
 using System;
 using System.Collections.Generic;
@@ -44,6 +45,14 @@ namespace KontrolerPoslovneLogike
             bool rez = sacuvajIzmeneClan.IzvrsiSO(novi);
 
             return rez;
+        }
+
+        public static int UbaciClana(Clan c)
+        {
+            OpstaSistemskaOperacija ubaciClana = new UbaciClanaSO();
+
+            ubaciClana.IzvrsiSO(c);
+            return c.ClanskiBroj;
         }
 
     }

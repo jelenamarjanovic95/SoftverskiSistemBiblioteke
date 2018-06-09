@@ -74,7 +74,7 @@ namespace Session
         #region ProsteGenericke
         public int Insert(IOpstiDomenskiObjekat odo)
         {
-            komanda.CommandText = $"Insert into {odo.VratiImeTabele()} values {odo.VratiVrednostiZaInsert()}";
+            komanda.CommandText = $"Insert into {odo.VratiImeTabele()} values ({odo.VratiVrednostiZaInsert()})";
             komanda.CommandType = System.Data.CommandType.Text;
             return komanda.ExecuteNonQuery();
         }
@@ -138,12 +138,20 @@ namespace Session
             return lista;
         }
 
-        //public OleDbDataReader ExecuteReader(string upit)
-        //{
-        //    komanda.CommandText = upit;
-        //    komanda.CommandType = System.Data.CommandType.Text;
-        //    return komanda.ExecuteReader();
-        //}
+        public int DajClanskiBroj()
+        {
+            komanda.CommandText = "Select Max(ClanskiBroj) from Clan";
+            komanda.CommandType = System.Data.CommandType.Text;
 
+            var res = komanda.ExecuteScalar();
+            if (res != DBNull.Value)
+            {
+                return Convert.ToInt32(res) + 23;
+            }
+            else
+            {
+                return 1111;
+            }
+        }
     }
 }
