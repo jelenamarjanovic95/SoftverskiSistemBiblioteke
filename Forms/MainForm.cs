@@ -69,7 +69,7 @@ namespace Forms
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            KontrolerKorisnickogInterfejsa.Kraj();
+            Komunikacija.Instance.Kraj();
         }
     }
 }

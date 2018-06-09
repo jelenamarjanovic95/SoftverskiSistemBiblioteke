@@ -45,8 +45,7 @@ namespace Forms
             string korisnickoIme = txtKorisnickoIme.Text;
             string lozinka = txtLozinka.Text;
 
-            //Bibl = Komunikacija.Instance.PrijaviSe(korisnickoIme, lozinka);
-            KontrolerKorisnickogInterfejsa.PrijaviSe(korisnickoIme, lozinka, this);
+            Bibl = Komunikacija.Instance.PrijaviSe(korisnickoIme, lozinka);
             if (Bibl != null)
             {
                 this.DialogResult = DialogResult.OK;

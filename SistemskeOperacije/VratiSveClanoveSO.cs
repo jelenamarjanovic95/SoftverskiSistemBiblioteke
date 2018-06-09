@@ -15,8 +15,8 @@ namespace SistemskeOperacije
         {
             try
             {
-                //Rezultat = Broker.Instanca.VratiSveClanove();
-                //Prvo uzmemo listu Clanova, pa onda listu zaduzenja, pa onda primerke, pa autore
+                Rezultat = GenerickiBroker.Instanca.VratiSve(odo);
+                
                 return true;
             }
             catch (Exception e)

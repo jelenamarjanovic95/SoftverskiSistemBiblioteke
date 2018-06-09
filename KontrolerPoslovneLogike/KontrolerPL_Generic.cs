@@ -10,11 +10,16 @@ namespace KontrolerPoslovneLogike
 {
     public class KontrolerPL_Generic
     {
-        public static List<Clan> VratiSveClanove()
+        //Nece da se konvertuje u listu!
+        public static List<IOpstiDomenskiObjekat> VratiSveClanove()
         {
             OpstaSistemskaOperacija vratiClanove = new VratiSveClanoveSO();
-            vratiClanove.IzvrsiSO(new Clan());
-            return vratiClanove.Rezultat as List<Clan>;
+            bool rez = vratiClanove.IzvrsiSO(new Clan());
+            if (rez)
+                return vratiClanove.Rezultat as List<IOpstiDomenskiObjekat>;
+            else throw new Exception();
         }
+
+
     }
 }

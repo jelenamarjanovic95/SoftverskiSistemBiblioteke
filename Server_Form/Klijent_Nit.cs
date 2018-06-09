@@ -63,7 +63,7 @@ namespace Server_Form
                             try
                             {
                                 //List<Clan> listaClanova = Kontroler.VratiSveClanove();
-                                List<Clan> listaClanova = KontrolerPL_Generic.VratiSveClanove();
+                                List<IOpstiDomenskiObjekat> listaClanova = KontrolerPL_Generic.VratiSveClanove();
                                 odgovor.TransferObjekat = listaClanova;
                                 odgovor.Signal = true;
                             }
