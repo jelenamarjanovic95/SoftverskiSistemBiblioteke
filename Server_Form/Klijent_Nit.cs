@@ -85,7 +85,9 @@ namespace Server_Form
                         case Operacija.VratiSveKnjige:
                             try
                             {
-                                List<Knjiga> listaKnjiga = Kontroler.VratiSveKnjige();
+                                //List<Knjiga> listaKnjiga = Kontroler.VratiSveKnjige();
+                                List<IOpstiDomenskiObjekat> listaKnjiga = KontrolerPL_Generic.VratiSveKnjige();
+
                                 odgovor.TransferObjekat = listaKnjiga;
                                 odgovor.Signal = true;
                             }

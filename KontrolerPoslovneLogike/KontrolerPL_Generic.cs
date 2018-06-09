@@ -19,7 +19,14 @@ namespace KontrolerPoslovneLogike
             else throw new Exception();
         }
 
-
+        public static List<IOpstiDomenskiObjekat> VratiSveKnjige()
+        {
+            OpstaSistemskaOperacija vratiKnjige = new VratiSveKnjigeSO();
+            bool rez = vratiKnjige.IzvrsiSO(new Knjiga());
+            if (rez)
+                return vratiKnjige.Rezultat as List<IOpstiDomenskiObjekat>;
+            else throw new Exception();
+        }
 
 
     }

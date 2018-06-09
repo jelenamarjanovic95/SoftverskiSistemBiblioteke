@@ -43,6 +43,7 @@
     <Compile Include="OpstaSistemskaOperacija.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VratiSveClanoveSO.cs" />
+    <Compile Include="VratiSveKnjigeSO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">

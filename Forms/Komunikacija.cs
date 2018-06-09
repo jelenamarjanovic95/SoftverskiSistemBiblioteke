@@ -198,7 +198,7 @@ namespace Forms
         {
             TransferKlasa zahtev = new TransferKlasa()
             {
-                Operacija = Operacija.SacuvajIzmeneClan,
+                Operacija = Operacija.SacuvajIzmeneKnjiga,
                 TransferObjekat = k
             };
             formater.Serialize(tok, zahtev);
@@ -223,6 +223,7 @@ namespace Forms
 
         public List<Knjiga> VratiSveKnjige()
         {
+            List<Knjiga> listaKnjiga = new List<Knjiga>();
             TransferKlasa zahtev = new TransferKlasa()
             {
                 Operacija = Operacija.VratiSveKnjige
@@ -231,7 +232,14 @@ namespace Forms
             TransferKlasa odgovor = formater.Deserialize(tok) as TransferKlasa;
 
             if (odgovor.Signal)
-                return odgovor.TransferObjekat as List<Knjiga>;
+            {
+                List<IOpstiDomenskiObjekat> lista = odgovor.TransferObjekat as List<IOpstiDomenskiObjekat>;
+                foreach(IOpstiDomenskiObjekat odo in lista)
+                {
+                    listaKnjiga.Add(odo as Knjiga);
+                }
+                return listaKnjiga;
+            }
             else return null;
         }
 
