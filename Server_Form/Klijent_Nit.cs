@@ -295,7 +295,8 @@ namespace Server_Form
                         case Operacija.Zaduzi:
                             try
                             {
-                                Kontroler.Zaduzi(zahtevKlijenta.TransferObjekat as Zaduzenje);
+                                //Kontroler.Zaduzi(zahtevKlijenta.TransferObjekat as Zaduzenje);
+                                KontrolerPL_Generic.Zaduzi(zahtevKlijenta.TransferObjekat as Zaduzenje);
                                 odgovor.Signal = true;
                             }
                             catch (Exception)
@@ -309,7 +310,8 @@ namespace Server_Form
                         case Operacija.Razduzi:
                             try
                             {
-                                Kontroler.Razduzi(zahtevKlijenta.TransferObjekat as Zaduzenje);
+                                //Kontroler.Razduzi(zahtevKlijenta.TransferObjekat as Zaduzenje);
+                                KontrolerPL_Generic.Razduzi(zahtevKlijenta.TransferObjekat as Zaduzenje);
                                 odgovor.Signal = true;
                             }
                             catch (Exception)

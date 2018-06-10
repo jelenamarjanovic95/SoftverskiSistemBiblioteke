@@ -46,8 +46,7 @@ namespace Model
                 string rez = "";
                 foreach (Autor a in listaAutora)
                 {
-                    rez += a.ImePrezime;
-                    rez += "\t";
+                    rez += $"{a.ImePrezime}; ";
                 }
                 Console.WriteLine(rez);
                 return rez;

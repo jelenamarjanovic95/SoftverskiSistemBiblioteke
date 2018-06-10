@@ -85,6 +85,7 @@ namespace Forms
                     }
                 }
                 z.Clan = clan;
+                primerak.Knjiga = k;
                 z.KnjigaPrimerak = primerak;
 
 

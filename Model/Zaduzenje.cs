@@ -65,17 +65,7 @@ namespace Model
                     DatumOd = Convert.ToDateTime(citac["DatumOd"]),
                     KnjigaPrimerak = new KnjigaPrimerak()
                     {
-                        PrimerakID = Convert.ToInt32(citac["Zaduzenje.PrimerakID"]),
-                        Raspoloziva = Convert.ToBoolean(citac["Raspoloziva"]),
-                        Knjiga = new Knjiga()
-                        {
-                            GodinaIzdanja = Convert.ToInt32(citac["GodinaIzdanja"]),
-                            Naziv = citac["Naziv"].ToString(),
-                            Opis = citac["Opis"].ToString(),
-                            KnjigaID = Convert.ToInt32(citac["Knjiga.KnjigaID"]),
-                            BrojPrimeraka = Convert.ToInt32(citac["BrojPrimeraka"]),
-                            Raspolozivo = Convert.ToInt32(citac["Raspolozivo"])
-                        }
+                        PrimerakID = Convert.ToInt32(citac["PrimerakID"])
                     }
                 };
                 if (citac["DatumDo"] != DBNull.Value)

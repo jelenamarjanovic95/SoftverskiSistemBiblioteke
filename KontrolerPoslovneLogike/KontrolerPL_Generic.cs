@@ -112,7 +112,7 @@ namespace KontrolerPoslovneLogike
 
         public static List<IOpstiDomenskiObjekat> PretraziKnjige(Pretraga pretraga)
         {
-            if(pretraga.Vrednost == "")
+            if (pretraga.Vrednost == "")
             {
                 return VratiSveKnjige();
             }
@@ -145,7 +145,21 @@ namespace KontrolerPoslovneLogike
             if (!rez) throw new Exception();
         }
 
+        public static void Zaduzi(Zaduzenje z)
+        {
+            if (!z.KnjigaPrimerak.Raspoloziva)
+            {
+                throw new Exception();
+            }
 
+            OpstaSistemskaOperacija zaduzi = new ZaduziSO();
+            zaduzi.IzvrsiSO(z);
+        }
 
+        public static void Razduzi(Zaduzenje z)
+        {
+            OpstaSistemskaOperacija razduzi = new RazduziSO();
+            razduzi.IzvrsiSO(z);
+        }
     }
 }
