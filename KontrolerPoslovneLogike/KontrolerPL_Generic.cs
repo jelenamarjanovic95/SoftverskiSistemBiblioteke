@@ -137,5 +137,15 @@ namespace KontrolerPoslovneLogike
                 return nadjiKnjigu.Rezultat as Knjiga;
             else throw new Exception();
         }
+
+        public static void ObrisiKnjigu(Knjiga k)
+        {
+            OpstaSistemskaOperacija obrisiKnjigu = new ObrisiKnjiguSO();
+            bool rez = obrisiKnjigu.IzvrsiSO(k);
+            if (!rez) throw new Exception();
+        }
+
+
+
     }
 }

@@ -198,7 +198,8 @@ namespace Server_Form
                         case Operacija.ObrisiKnjigu:
                             try
                             {
-                                Kontroler.ObrisiKnjigu(zahtevKlijenta.TransferObjekat as Knjiga);
+                                //Kontroler.ObrisiKnjigu(zahtevKlijenta.TransferObjekat as Knjiga);
+                                KontrolerPL_Generic.ObrisiKnjigu(zahtevKlijenta.TransferObjekat as Knjiga);
                                 odgovor.Signal = true;
                             }
                             catch (Exception)

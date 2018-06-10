@@ -43,6 +43,7 @@
     <Compile Include="NadjiClanaSO.cs" />
     <Compile Include="NadjiKnjiguSO.cs" />
     <Compile Include="ObrisiClanaSO.cs" />
+    <Compile Include="ObrisiKnjiguSO.cs" />
     <Compile Include="OpstaSistemskaOperacija.cs" />
     <Compile Include="PretraziClanoveSO.cs" />
     <Compile Include="PretraziKnjigeSO.cs" />
