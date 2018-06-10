@@ -48,6 +48,7 @@
     <Compile Include="SacuvajIzmeneClanSO.cs" />
     <Compile Include="SacuvajIzmeneKnjigaSO.cs" />
     <Compile Include="UbaciClanaSO.cs" />
+    <Compile Include="UbaciKnjiguSO.cs" />
     <Compile Include="VratiSveAutoreSO.cs" />
     <Compile Include="VratiSveClanoveSO.cs" />
     <Compile Include="VratiSveKnjigeSO.cs" />

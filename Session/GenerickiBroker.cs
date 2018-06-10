@@ -169,5 +169,22 @@ namespace Session
                 return 1111;
             }
         }
+
+        public int DajPrimerakID()
+        {
+            komanda.CommandText = "Select Max(PrimerakID) from KnjigaPrimerak";
+            komanda.CommandType = System.Data.CommandType.Text;
+
+            var res = komanda.ExecuteScalar();
+            if (res != DBNull.Value)
+            {
+                return Convert.ToInt32(res) + 1;
+            }
+            else
+            {
+                return 111;
+            }
+
+        }
     }
 }

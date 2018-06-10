@@ -101,5 +101,13 @@ namespace KontrolerPoslovneLogike
 
             return rez;
         }
+
+        public static int UbaciKnjigu(Knjiga k)
+        {
+            OpstaSistemskaOperacija ubaciKnjigu = new UbaciKnjiguSO();
+
+            ubaciKnjigu.IzvrsiSO(k);
+            return k.KnjigaID;
+        }
     }
 }

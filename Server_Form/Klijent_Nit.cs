@@ -149,7 +149,8 @@ namespace Server_Form
                         case Operacija.UbaciKnjigu:
                             try
                             {
-                                int id = Kontroler.UbaciKnjigu(zahtevKlijenta.TransferObjekat as Knjiga);
+                                //int id = Kontroler.UbaciKnjigu(zahtevKlijenta.TransferObjekat as Knjiga);
+                                int id = KontrolerPL_Generic.UbaciKnjigu(zahtevKlijenta.TransferObjekat as Knjiga);
                                 odgovor.TransferObjekat = id;
                                 odgovor.Signal = true;
                             }
