@@ -123,5 +123,19 @@ namespace KontrolerPoslovneLogike
                 return pretraziKnjige.Rezultat as List<IOpstiDomenskiObjekat>;
             else throw new Exception();
         }
+
+        public static Knjiga NadjiKnjigu(int brojKnjige)
+        {
+            Knjiga k = new Knjiga()
+            {
+                KnjigaID = brojKnjige
+            };
+            OpstaSistemskaOperacija nadjiKnjigu = new NadjiKnjiguSO();
+            bool rez = nadjiKnjigu.IzvrsiSO(k);
+
+            if (rez)
+                return nadjiKnjigu.Rezultat as Knjiga;
+            else throw new Exception();
+        }
     }
 }

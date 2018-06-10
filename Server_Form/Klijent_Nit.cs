@@ -182,7 +182,8 @@ namespace Server_Form
                         case Operacija.NadjiKnjigu:
                             try
                             {
-                                Knjiga k = Kontroler.NadjiKnjigu((int)zahtevKlijenta.TransferObjekat);
+                                //Knjiga k = Kontroler.NadjiKnjigu((int)zahtevKlijenta.TransferObjekat);
+                                Knjiga k = KontrolerPL_Generic.NadjiKnjigu((int)zahtevKlijenta.TransferObjekat);
                                 odgovor.TransferObjekat = k;
                                 odgovor.Signal = true;
                             }

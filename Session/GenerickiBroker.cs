@@ -61,7 +61,14 @@ namespace Session
 
         public void OtvoriKonekciju()
         {
-            konekcija.Open();
+            try
+            {
+                konekcija.Open();
+            }
+            catch (Exception)
+            {
+                
+            }
         }
 
         public void ZatvoriKonekciju()

@@ -29,9 +29,8 @@ namespace SistemskeOperacije
                     case KriterijumPretrage.NazivKnjige:
                         upit = $"Select * from Knjiga where Naziv like '%{Pretraga.Vrednost}%' order by Naziv ASC";
                         break;
-                    //case KriterijumPretrage.ImePrezimeAutor:
-                    //    listaKnjiga = new VratiSveKnjigeSO().IzvrsiSO(new Knjiga());
-                    //    return this.NadjiKnjigePoAutoru(listaKnjiga, vrednostKriterijuma);
+                    case KriterijumPretrage.ImePrezimeAutor:
+                        return PretraziPoAutoru();
                     //OVAJ CASE PREBACITI U KONTROLERA?
                     case KriterijumPretrage.BrojKnjige:
                         upit = $"Select * from Knjiga where KnjigaID = {Convert.ToInt32(Pretraga.Vrednost)} order by Naziv ASC";
@@ -75,6 +74,38 @@ namespace SistemskeOperacije
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                return false;
+            }
+        }
+
+        //TODO!!
+        private bool PretraziPoAutoru()
+        {
+            try
+            {
+                List<IOpstiDomenskiObjekat> listaPronadjenihKnjiga = new List<IOpstiDomenskiObjekat>();
+                VratiSveKnjigeSO so = new VratiSveKnjigeSO();
+                so.IzvrsiSO(new Knjiga());
+                List<IOpstiDomenskiObjekat> sveKnjige = so.Rezultat as List<IOpstiDomenskiObjekat>;
+
+                foreach(IOpstiDomenskiObjekat odo in sveKnjige)
+                {
+                    Knjiga k = odo as Knjiga;
+
+                    foreach(Autor a in k.ListaAutora)
+                    {
+                        if (a.ImePrezime.ToLower().Contains(Pretraga.Vrednost.ToLower()))
+                        {
+                            listaPronadjenihKnjiga.Add(k);
+                            break;
+                        }
+                    }
+                }
+                Rezultat = listaPronadjenihKnjiga;
+                return true;
+            }
+            catch (Exception e)
+            {
                 return false;
             }
         }
