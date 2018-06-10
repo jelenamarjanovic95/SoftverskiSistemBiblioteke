@@ -24,7 +24,19 @@ namespace Model
 
         public List<IOpstiDomenskiObjekat> VratiListu(OleDbDataReader citac)
         {
-            throw new NotImplementedException();
+            List<IOpstiDomenskiObjekat> lista = new List<IOpstiDomenskiObjekat>();
+
+            while (citac.Read())
+            {
+                KnjigaAutor ka = new KnjigaAutor()
+                {
+                    AutorID = Convert.ToInt32(citac["AutorID"]),
+                    KnjigaID = Convert.ToInt32(citac["KnjigaID"])
+                };
+                lista.Add(ka);
+            }
+
+            return lista;
         }
 
         public string VratiVrednostiZaInsert()

@@ -109,5 +109,19 @@ namespace KontrolerPoslovneLogike
             ubaciKnjigu.IzvrsiSO(k);
             return k.KnjigaID;
         }
+
+        public static List<IOpstiDomenskiObjekat> PretraziKnjige(Pretraga pretraga)
+        {
+            if(pretraga.Vrednost == "")
+            {
+                return VratiSveKnjige();
+            }
+            OpstaSistemskaOperacija pretraziKnjige = new PretraziKnjigeSO(pretraga);
+
+            bool rez = pretraziKnjige.IzvrsiSO(new Knjiga());
+            if (rez)
+                return pretraziKnjige.Rezultat as List<IOpstiDomenskiObjekat>;
+            else throw new Exception();
+        }
     }
 }

@@ -274,6 +274,7 @@ namespace Forms
 
         public List<Knjiga> PretraziKnjige(string vrednost, KriterijumPretrage kriterijum)
         {
+            List<Knjiga> listaPronadjenihKnjiga = new List<Knjiga>();
             TransferKlasa zahtev = new TransferKlasa()
             {
                 Operacija = Operacija.PretraziKnjige,
@@ -287,7 +288,14 @@ namespace Forms
             TransferKlasa odgovor = formater.Deserialize(tok) as TransferKlasa;
 
             if (odgovor.Signal)
-                return odgovor.TransferObjekat as List<Knjiga>;
+            {
+                List<IOpstiDomenskiObjekat> lista = odgovor.TransferObjekat as List<IOpstiDomenskiObjekat>;
+                foreach (IOpstiDomenskiObjekat odo in lista)
+                {
+                    listaPronadjenihKnjiga.Add((Knjiga)odo);
+                }
+                return listaPronadjenihKnjiga;
+            }
             else return null;
         }
 

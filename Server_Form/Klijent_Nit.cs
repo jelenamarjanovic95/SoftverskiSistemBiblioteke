@@ -166,7 +166,8 @@ namespace Server_Form
                             try
                             {
                                 Pretraga p = zahtevKlijenta.TransferObjekat as Pretraga;
-                                List<Knjiga> listaKnjiga = Kontroler.PretraziKnjige(p.Vrednost, p.KriterijumPretrage);
+                                //List<Knjiga> listaKnjiga = Kontroler.PretraziKnjige(p.Vrednost, p.KriterijumPretrage);
+                                List<IOpstiDomenskiObjekat> listaKnjiga = KontrolerPL_Generic.PretraziKnjige(p);
                                 odgovor.TransferObjekat = listaKnjiga;
                                 odgovor.Signal = true;
                             }
@@ -348,10 +349,17 @@ namespace Server_Form
 
         internal void UgasiKlijenta()
         {
-            kraj = true;
-            listaKlijenata.Remove(klijent);
-            klijent.Shutdown(SocketShutdown.Both);
-            klijent.Close();
+            try
+            {
+                kraj = true;
+                listaKlijenata.Remove(klijent);
+                klijent.Shutdown(SocketShutdown.Both);
+                klijent.Close();
+            }
+            catch (Exception)
+            {
+                
+            }
         }
     }
 }
