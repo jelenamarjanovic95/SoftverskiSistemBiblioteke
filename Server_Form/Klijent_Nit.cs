@@ -119,7 +119,8 @@ namespace Server_Form
                         case Operacija.SacuvajIzmeneKnjiga:
                             try
                             {
-                                Kontroler.SacuvajIzmeneKnjiga(zahtevKlijenta.TransferObjekat as Knjiga);
+                                //Kontroler.SacuvajIzmeneKnjiga(zahtevKlijenta.TransferObjekat as Knjiga);
+                                KontrolerPL_Generic.SacuvajIzmeneKnjiga(zahtevKlijenta.TransferObjekat as Knjiga);
                                 odgovor.Signal = true;
                             }
                             catch (Exception e)

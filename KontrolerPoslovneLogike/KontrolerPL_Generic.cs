@@ -63,8 +63,8 @@ namespace KontrolerPoslovneLogike
                 return VratiSveClanove();
             }
 
-            pretraziClanove = new PretraziClanoveSO();
-            pretraziClanove.Pretraga = pretraga;
+            pretraziClanove = new PretraziClanoveSO(pretraga);
+            //pretraziClanove.Pretraga = pretraga;
             bool rez = pretraziClanove.IzvrsiSO(new Clan());
 
             if (rez)
@@ -91,6 +91,15 @@ namespace KontrolerPoslovneLogike
             OpstaSistemskaOperacija obrisiClana = new ObrisiClanaSO();
             bool rez = obrisiClana.IzvrsiSO(c);
             if (!rez) throw new Exception();
+        }
+
+        public static bool SacuvajIzmeneKnjiga(Knjiga novo)
+        {
+            OpstaSistemskaOperacija sacuvajIzmeneKnjiga = new SacuvajIzmeneKnjigaSO();
+
+            bool rez = sacuvajIzmeneKnjiga.IzvrsiSO(novo);
+
+            return rez;
         }
     }
 }

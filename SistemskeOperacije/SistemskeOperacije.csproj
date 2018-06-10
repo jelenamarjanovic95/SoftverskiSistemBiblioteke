@@ -46,6 +46,7 @@
     <Compile Include="PretraziClanoveSO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SacuvajIzmeneClanSO.cs" />
+    <Compile Include="SacuvajIzmeneKnjigaSO.cs" />
     <Compile Include="UbaciClanaSO.cs" />
     <Compile Include="VratiSveAutoreSO.cs" />
     <Compile Include="VratiSveClanoveSO.cs" />

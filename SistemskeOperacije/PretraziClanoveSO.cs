@@ -12,6 +12,11 @@ namespace SistemskeOperacije
     {
         public Pretraga Pretraga { get; set; }
 
+        public PretraziClanoveSO(Pretraga p)
+        {
+            this.Pretraga = p;
+        }
+
         protected override bool Izvrsi(IOpstiDomenskiObjekat odo)
         {
             try

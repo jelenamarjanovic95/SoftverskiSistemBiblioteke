@@ -153,5 +153,21 @@ namespace Session
                 return 1111;
             }
         }
+
+        public int DajKnjigaID()
+        {
+            komanda.CommandText = "Select Max(KnjigaID) from Knjiga";
+            komanda.CommandType = System.Data.CommandType.Text;
+
+            var res = komanda.ExecuteScalar();
+            if (res != DBNull.Value)
+            {
+                return Convert.ToInt32(res) + 1;
+            }
+            else
+            {
+                return 1111;
+            }
+        }
     }
 }
