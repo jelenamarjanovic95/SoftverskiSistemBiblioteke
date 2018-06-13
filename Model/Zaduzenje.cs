@@ -70,6 +70,10 @@ namespace Model
                         {
                             KnjigaID = Convert.ToInt32(citac["KnjigaID"])
                         }
+                    },
+                    Clan = new Clan()
+                    {
+                        ClanskiBroj = Convert.ToInt32(citac["ClanskiBroj"])
                     }
                 };
                 if (citac["DatumDo"] != DBNull.Value)

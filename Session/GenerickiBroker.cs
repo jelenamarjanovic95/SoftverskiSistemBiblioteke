@@ -100,7 +100,7 @@ namespace Session
             komanda.ExecuteNonQuery();
         }
 
-        public List<IOpstiDomenskiObjekat> VratiSve(IOpstiDomenskiObjekat odo)
+        public List<IOpstiDomenskiObjekat> SelectAll(IOpstiDomenskiObjekat odo)
         {
             komanda.CommandText = $"Select * from {odo.VratiImeTabele()}";
             komanda.CommandType = System.Data.CommandType.Text;
@@ -112,21 +112,21 @@ namespace Session
         #endregion
 
        
-        public void SlozenInsert(List<IOpstiDomenskiObjekat> odos)
-        {
-            foreach(IOpstiDomenskiObjekat odo in odos)
-            {
-                this.Insert(odo);
-            }
-        }
+        //public void SlozenInsert(List<IOpstiDomenskiObjekat> odos)
+        //{
+        //    foreach(IOpstiDomenskiObjekat odo in odos)
+        //    {
+        //        this.Insert(odo);
+        //    }
+        //}
 
-        public void SlozenUpdate(List<IOpstiDomenskiObjekat> odos)
-        {
-            foreach (IOpstiDomenskiObjekat odo in odos)
-            {
-                this.Update(odo);
-            }
-        }
+        //public void SlozenUpdate(List<IOpstiDomenskiObjekat> odos)
+        //{
+        //    foreach (IOpstiDomenskiObjekat odo in odos)
+        //    {
+        //        this.Update(odo);
+        //    }
+        //}
 
         public void ExecuteNonQuery(string upit)
         {

@@ -14,7 +14,7 @@ namespace SistemskeOperacije
         {
             try
             {
-                List<IOpstiDomenskiObjekat> lista = GenerickiBroker.Instanca.VratiSve(odo);
+                List<IOpstiDomenskiObjekat> lista = GenerickiBroker.Instanca.SelectAll(odo);
                 Rezultat = lista;
 
                 return true;

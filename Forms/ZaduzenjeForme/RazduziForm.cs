@@ -36,11 +36,9 @@ namespace Forms
             {
                 if (zaduzenje == null)
                 {
-                    //Knjiga k = Kontroler.NadjiKnjigu(Convert.ToInt32(txtBrojKnjige.Text));
                     Knjiga k = Komunikacija.Instance.NadjiKnjigu(Convert.ToInt32(txtBrojKnjige.Text));
                     zaduzenje = new Zaduzenje()
                     {
-                        //Clan = Kontroler.NadjiClana(Convert.ToInt32(txtClanskiBroj.Text)),
                         Clan = Komunikacija.Instance.NadjiClana(Convert.ToInt32(txtClanskiBroj.Text)),
                         DatumOd = Convert.ToDateTime(txtDatum.Text)
                     };
@@ -133,8 +131,9 @@ namespace Forms
 
             try
             {
-                Zaduzenje z = Komunikacija.Instance.NadjiZaduzenje(c, kp);
-                txtDatum.Text = z.DatumOd.ToShortDateString();
+                zaduzenje = Komunikacija.Instance.NadjiZaduzenje(c, kp);
+                
+                txtDatum.Text = zaduzenje.DatumOd.ToShortDateString();
             }
             catch (Exception)
             {

@@ -62,7 +62,7 @@
             this.dgvBibliotekari.AllowUserToAddRows = false;
             this.dgvBibliotekari.AllowUserToDeleteRows = false;
             this.dgvBibliotekari.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBibliotekari.Location = new System.Drawing.Point(33, 124);
+            this.dgvBibliotekari.Location = new System.Drawing.Point(33, 177);
             this.dgvBibliotekari.Name = "dgvBibliotekari";
             this.dgvBibliotekari.ReadOnly = true;
             this.dgvBibliotekari.Size = new System.Drawing.Size(409, 236);
@@ -71,7 +71,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 97);
+            this.label1.Location = new System.Drawing.Point(30, 150);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 13);
             this.label1.TabIndex = 3;
@@ -79,7 +79,7 @@
             // 
             // btnDiskonektuj
             // 
-            this.btnDiskonektuj.Location = new System.Drawing.Point(452, 307);
+            this.btnDiskonektuj.Location = new System.Drawing.Point(452, 360);
             this.btnDiskonektuj.Name = "btnDiskonektuj";
             this.btnDiskonektuj.Size = new System.Drawing.Size(120, 53);
             this.btnDiskonektuj.TabIndex = 4;
@@ -100,7 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 372);
+            this.ClientSize = new System.Drawing.Size(598, 95);
             this.Controls.Add(this.lblStanje);
             this.Controls.Add(this.btnDiskonektuj);
             this.Controls.Add(this.label1);

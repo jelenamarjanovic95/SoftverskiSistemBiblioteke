@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPronadjiDatum = new System.Windows.Forms.Button();
             this.txtDatum = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lblPoruka = new System.Windows.Forms.Label();
@@ -46,7 +46,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnPronadjiDatum);
             this.groupBox1.Controls.Add(this.txtDatum);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.lblPoruka);
@@ -67,16 +67,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Izmeni zaduženje";
             // 
-            // button1
+            // btnPronadjiDatum
             // 
-            this.button1.Location = new System.Drawing.Point(230, 86);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 71);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Pronadji datum zaduzenja";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnPronadjiDatum.Location = new System.Drawing.Point(230, 86);
+            this.btnPronadjiDatum.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPronadjiDatum.Name = "btnPronadjiDatum";
+            this.btnPronadjiDatum.Size = new System.Drawing.Size(122, 71);
+            this.btnPronadjiDatum.TabIndex = 13;
+            this.btnPronadjiDatum.Text = "Pronadji datum zaduzenja";
+            this.btnPronadjiDatum.UseVisualStyleBackColor = true;
+            this.btnPronadjiDatum.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtDatum
             // 
@@ -210,7 +210,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPronadjiDatum;
         private System.Windows.Forms.TextBox txtDatum;
         private System.Windows.Forms.Label label4;
     }

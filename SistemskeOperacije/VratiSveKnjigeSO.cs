@@ -14,7 +14,7 @@ namespace SistemskeOperacije
         {
             try
             {
-                List<IOpstiDomenskiObjekat> listaKnjiga = GenerickiBroker.Instanca.VratiSve(odo);
+                List<IOpstiDomenskiObjekat> listaKnjiga = GenerickiBroker.Instanca.SelectAll(odo);
                 string upit;
 
                 foreach(IOpstiDomenskiObjekat knjiga in listaKnjiga)

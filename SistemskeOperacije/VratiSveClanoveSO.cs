@@ -15,7 +15,7 @@ namespace SistemskeOperacije
         {
             try
             {
-                List<IOpstiDomenskiObjekat> listaClanova = GenerickiBroker.Instanca.VratiSve(odo);
+                List<IOpstiDomenskiObjekat> listaClanova = GenerickiBroker.Instanca.SelectAll(odo);
                 foreach (IOpstiDomenskiObjekat o in listaClanova)
                 {
                     Clan c = o as Clan;
