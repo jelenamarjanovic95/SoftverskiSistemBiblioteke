@@ -360,6 +360,7 @@ namespace Server_Form
                 listaKlijenata.Remove(klijent);
                 klijent.Shutdown(SocketShutdown.Both);
                 klijent.Close();
+                forma.OsveziDgv();
             }
             catch (Exception)
             {

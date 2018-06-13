@@ -14,6 +14,8 @@ namespace Forms
     public partial class MainForm : Form
     {
         private Bibliotekar ulogovaniBibliotekar;
+        public bool Povezan { get; set; }
+
         public MainForm()
         {
             InitializeComponent();
@@ -23,7 +25,7 @@ namespace Forms
         {
             try
             {
-                Komunikacija.Instance.PoveziSe();
+                Komunikacija.Instance.PoveziSe(this);
                 //MessageBox.Show("Uspesno povezan!");
             }
             catch (Exception ex)
@@ -69,7 +71,13 @@ namespace Forms
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Komunikacija.Instance.Kraj();
+            if(Povezan)
+                Komunikacija.Instance.Kraj();
+        }
+
+        internal void Zatvori()
+        {
+            Invoke(new Action(this.Close));
         }
     }
 }

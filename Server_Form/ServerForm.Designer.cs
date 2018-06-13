@@ -65,7 +65,7 @@
             this.dgvBibliotekari.Location = new System.Drawing.Point(33, 177);
             this.dgvBibliotekari.Name = "dgvBibliotekari";
             this.dgvBibliotekari.ReadOnly = true;
-            this.dgvBibliotekari.Size = new System.Drawing.Size(409, 236);
+            this.dgvBibliotekari.Size = new System.Drawing.Size(400, 236);
             this.dgvBibliotekari.TabIndex = 2;
             // 
             // label1
@@ -81,7 +81,7 @@
             // 
             this.btnDiskonektuj.Location = new System.Drawing.Point(452, 360);
             this.btnDiskonektuj.Name = "btnDiskonektuj";
-            this.btnDiskonektuj.Size = new System.Drawing.Size(120, 53);
+            this.btnDiskonektuj.Size = new System.Drawing.Size(101, 53);
             this.btnDiskonektuj.TabIndex = 4;
             this.btnDiskonektuj.Text = "Diskonektuj bibliotekara";
             this.btnDiskonektuj.UseVisualStyleBackColor = true;
@@ -100,7 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(565, 95);
+            this.ClientSize = new System.Drawing.Size(565, 436);
             this.Controls.Add(this.lblStanje);
             this.Controls.Add(this.btnDiskonektuj);
             this.Controls.Add(this.label1);

@@ -56,6 +56,10 @@ namespace Server_Form
         private void Server_Load(object sender, EventArgs e)
         {
             btnZaustavi.Enabled = false;
+            dgvBibliotekari.DataSource = bibliotekari;
+            dgvBibliotekari.Columns[0].Width = 100;
+            dgvBibliotekari.Columns[1].Width = 150;
+            dgvBibliotekari.Columns[2].Width = 105;
         }
 
         private void btnUgasi_Click(object sender, EventArgs e)
@@ -75,10 +79,10 @@ namespace Server_Form
             }
             catch (Exception)
             {
-                
+
             }
         }
-        
+
         internal void OsveziDgv()
         {
             Invoke(new Action(OsveziFormu));
@@ -88,33 +92,20 @@ namespace Server_Form
         {
             dgvBibliotekari.DataSource = null;
             dgvBibliotekari.DataSource = server.Bibliotekari;
+            dgvBibliotekari.Columns[0].Width = 100;
+            dgvBibliotekari.Columns[1].Width = 150;
+            dgvBibliotekari.Columns[2].Width = 105;
             dgvBibliotekari.Refresh();
         }
 
         private void btnDiskonektuj_Click(object sender, EventArgs e)
         {
-            server.DiskonektujKlijenta(dgvBibliotekari.SelectedCells[0].RowIndex);
-            //TODO: message box! yes no
-            //TODO: Obavesti klijenta da je diskonektovan
+            DialogResult dialog = MessageBox.Show("Da li ste sigurni da diskonektujete odabranog bibliotekara?", "Provera", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
+            {
+                server.DiskonektujKlijenta(dgvBibliotekari.SelectedCells[0].RowIndex);
+            }
         }
 
-        //public void ugasiKlijenta()
-        //{
-        //    while (true)
-        //    {
-        //        Console.WriteLine("Broj klijenta kojeg zelite da ugasite?");
-        //        string zahtev = Console.ReadLine();
-        //        int brojKlijenta = Convert.ToInt32(zahtev);
-        //        foreach (TransferKlasa tk in klijenti)
-        //        {
-        //            if (tk.Signal == brojKlijenta)
-        //            {
-        //                (tk.TransferObjekat as Socket).Close();
-        //                klijenti.Remove(tk);
-        //                break;
-        //            }
-        //        }
-        //    }
-        //}
     }
 }
