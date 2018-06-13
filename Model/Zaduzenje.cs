@@ -65,7 +65,11 @@ namespace Model
                     DatumOd = Convert.ToDateTime(citac["DatumOd"]),
                     KnjigaPrimerak = new KnjigaPrimerak()
                     {
-                        PrimerakID = Convert.ToInt32(citac["PrimerakID"])
+                        PrimerakID = Convert.ToInt32(citac["PrimerakID"]),
+                        Knjiga = new Knjiga()
+                        {
+                            KnjigaID = Convert.ToInt32(citac["KnjigaID"])
+                        }
                     }
                 };
                 if (citac["DatumDo"] != DBNull.Value)

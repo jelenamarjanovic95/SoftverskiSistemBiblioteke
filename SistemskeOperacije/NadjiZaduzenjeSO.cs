@@ -22,6 +22,9 @@ namespace SistemskeOperacije
                 List<IOpstiDomenskiObjekat> listaZaduzenja = GenerickiBroker.Instanca.ExecuteReader(upit, z);
 
 
+                if (listaZaduzenja.Count == 0) return false;
+
+                Rezultat = listaZaduzenja[0];
 
                 return true;
             }

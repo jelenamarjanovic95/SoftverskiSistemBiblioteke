@@ -25,22 +25,16 @@ namespace SistemskeOperacije
                     upit = $"Select * from (Zaduzenje inner join KnjigaPrimerak on Zaduzenje.PrimerakID = KnjigaPrimerak.PrimerakID) " +
                     $"inner join Knjiga on KnjigaPrimerak.KnjigaID = Knjiga.KnjigaID where Zaduzenje.ClanskiBroj = {c.ClanskiBroj}";
 
+                    upit = $"Select * from Zaduzenje where ClanskiBroj = {c.ClanskiBroj}";
+
                     List<IOpstiDomenskiObjekat> listaZaduzenja = GenerickiBroker.Instanca.ExecuteReader(upit, new Zaduzenje());
 
                     foreach (IOpstiDomenskiObjekat zaduzenje in listaZaduzenja)
                     {
                         Zaduzenje z = zaduzenje as Zaduzenje;
                         z.Clan = c;
-                        //upit = $"Select * from Autor inner join KnjigaAutor on Autor.AutorID = KnjigaAutor.AutorID where KnjigaAutor.KnjigaID = {z.KnjigaPrimerak.Knjiga.KnjigaID}";
 
-                        //List<IOpstiDomenskiObjekat> listaAutora = GenerickiBroker.Instanca.ExecuteReader(upit, new Autor());
-
-                        //foreach(IOpstiDomenskiObjekat autor in listaAutora)
-                        //{
-                        //    Autor a = autor as Autor;
-                        //    z.KnjigaPrimerak.Knjiga.ListaAutora.Add(a);
-
-                        //}
+                        upit = $"Select * from KnjigaPrimerak where PrimerakID = {z.KnjigaPrimerak.PrimerakID}";
 
                         c.ListaZaduzenja.Add(z);
                     }

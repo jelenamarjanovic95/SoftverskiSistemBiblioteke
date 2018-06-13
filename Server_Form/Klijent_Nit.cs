@@ -326,7 +326,8 @@ namespace Server_Form
                             try
                             {
                                 Zaduzenje zahtev = zahtevKlijenta.TransferObjekat as Zaduzenje;
-                                Zaduzenje odg = Kontroler.NadjiZaduzenje(zahtev.Clan, zahtev.KnjigaPrimerak);
+                                //Zaduzenje odg = Kontroler.NadjiZaduzenje(zahtev.Clan, zahtev.KnjigaPrimerak);
+                                Zaduzenje odg = KontrolerPL_Generic.NadjiZaduzenje(zahtev.Clan, zahtev.KnjigaPrimerak);
                                 odgovor.TransferObjekat = odg;
                                 odgovor.Signal = true;
                             }

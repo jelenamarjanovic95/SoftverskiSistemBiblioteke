@@ -161,5 +161,20 @@ namespace KontrolerPoslovneLogike
             OpstaSistemskaOperacija razduzi = new RazduziSO();
             razduzi.IzvrsiSO(z);
         }
+
+        public static Zaduzenje NadjiZaduzenje(Clan c, KnjigaPrimerak kp)
+        {
+            Zaduzenje zahtev = new Zaduzenje()
+            {
+                Clan = c,
+                KnjigaPrimerak = kp
+            };
+            OpstaSistemskaOperacija nadjiZaduzenje = new NadjiZaduzenjeSO();
+            bool rez = nadjiZaduzenje.IzvrsiSO(zahtev);
+
+            if (rez)
+                return nadjiZaduzenje.Rezultat as Zaduzenje;
+            else throw new Exception();
+        }
     }
 }
