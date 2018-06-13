@@ -49,7 +49,7 @@
             // 
             // btnZaustavi
             // 
-            this.btnZaustavi.Location = new System.Drawing.Point(452, 25);
+            this.btnZaustavi.Location = new System.Drawing.Point(412, 25);
             this.btnZaustavi.Name = "btnZaustavi";
             this.btnZaustavi.Size = new System.Drawing.Size(120, 43);
             this.btnZaustavi.TabIndex = 1;
@@ -91,7 +91,7 @@
             // 
             this.lblStanje.AutoSize = true;
             this.lblStanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStanje.Location = new System.Drawing.Point(218, 38);
+            this.lblStanje.Location = new System.Drawing.Point(226, 38);
             this.lblStanje.Name = "lblStanje";
             this.lblStanje.Size = new System.Drawing.Size(0, 15);
             this.lblStanje.TabIndex = 5;
@@ -100,7 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 95);
+            this.ClientSize = new System.Drawing.Size(565, 95);
             this.Controls.Add(this.lblStanje);
             this.Controls.Add(this.btnDiskonektuj);
             this.Controls.Add(this.label1);
