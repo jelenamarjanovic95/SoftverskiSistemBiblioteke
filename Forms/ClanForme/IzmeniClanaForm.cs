@@ -34,11 +34,32 @@ namespace Forms
             txtImePrezime.Text = clan.ImePrezime;
         }
 
+        private bool SamoCifre(string str)
+        {
+            foreach (char c in str)
+            {
+                if (c == '/' || c == '-')
+                    continue;
+                if (c < '0' || c > '9')
+                    return false;
+            }
+
+            return true;
+        }
+
         private void btnSacuvaj_Click(object sender, EventArgs e)
         {
+            lblPoruka.Text = "";
             if (txtAdresa.Text == "" || txtBrojTelefona.Text == "" || txtClanskiBroj.Text == "" || txtImePrezime.Text == "")
             {
-                MessageBox.Show("Sva polja su obavezna!");
+                lblPoruka.Text = "Sva polja su obavezna!";
+                lblPoruka.ForeColor = Color.Red;
+                return;
+            }
+            if (!SamoCifre(txtBrojTelefona.Text))
+            {
+                lblPoruka.Text = "Broj telefona moze sadrzati samo cifre!";
+                lblPoruka.ForeColor = Color.Red;
                 return;
             }
             string imePrez = txtImePrezime.Text;

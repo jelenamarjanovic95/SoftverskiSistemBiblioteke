@@ -38,11 +38,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblPoruka = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblPoruka);
             this.groupBox1.Controls.Add(this.btnSacuvaj);
             this.groupBox1.Controls.Add(this.txtAdresa);
             this.groupBox1.Controls.Add(this.txtBrojTelefona);
@@ -61,7 +63,7 @@
             // 
             // btnSacuvaj
             // 
-            this.btnSacuvaj.Location = new System.Drawing.Point(158, 221);
+            this.btnSacuvaj.Location = new System.Drawing.Point(158, 248);
             this.btnSacuvaj.Name = "btnSacuvaj";
             this.btnSacuvaj.Size = new System.Drawing.Size(142, 23);
             this.btnSacuvaj.TabIndex = 17;
@@ -134,6 +136,14 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Članski broj:";
             // 
+            // lblPoruka
+            // 
+            this.lblPoruka.AutoSize = true;
+            this.lblPoruka.Location = new System.Drawing.Point(9, 213);
+            this.lblPoruka.Name = "lblPoruka";
+            this.lblPoruka.Size = new System.Drawing.Size(0, 13);
+            this.lblPoruka.TabIndex = 18;
+            // 
             // IzmeniClanaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,5 +171,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPoruka;
     }
 }

@@ -77,8 +77,20 @@ namespace Forms
             listaPrimeraka.RemoveAt(dgvSpisakPrimeraka.SelectedCells[0].RowIndex);
         }
 
+        bool SamoCifre(string str)
+        {
+            foreach (char c in str)
+            {
+                if (c < '0' || c > '9')
+                    return false;
+            }
+
+            return true;
+        }
+
         private void btnSacuvaj_Click(object sender, EventArgs e)
         {
+            lblPoruka.Text = "";
             if (txtIzdanje.Text == "" || txtNaziv.Text == "" || txtOpis.Text == "")
             {
                 lblPoruka.Text = "Sva polja su obavezna!";
@@ -91,7 +103,12 @@ namespace Forms
                 lblPoruka.ForeColor = Color.Red;
                 return;
             }
-
+            if (!SamoCifre(txtIzdanje.Text))
+            {
+                lblPoruka.Text = "Godina izdanja ne sme sadrzati slova!";
+                lblPoruka.ForeColor = Color.Red;
+                return;
+            }
             unosKnjiga.GodinaIzdanja = Convert.ToInt32(txtIzdanje.Text);
             unosKnjiga.Naziv = txtNaziv.Text;
             unosKnjiga.Opis = txtOpis.Text;

@@ -149,14 +149,14 @@
             this.groupBox2.Controls.Add(this.dgvZaduzenja);
             this.groupBox2.Location = new System.Drawing.Point(726, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(353, 426);
+            this.groupBox2.Size = new System.Drawing.Size(375, 426);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Spisak zaduzenja";
             // 
             // btnOdaberi
             // 
-            this.btnOdaberi.Location = new System.Drawing.Point(184, 358);
+            this.btnOdaberi.Location = new System.Drawing.Point(209, 358);
             this.btnOdaberi.Name = "btnOdaberi";
             this.btnOdaberi.Size = new System.Drawing.Size(148, 43);
             this.btnOdaberi.TabIndex = 1;
@@ -172,7 +172,7 @@
             this.dgvZaduzenja.Location = new System.Drawing.Point(14, 25);
             this.dgvZaduzenja.Name = "dgvZaduzenja";
             this.dgvZaduzenja.ReadOnly = true;
-            this.dgvZaduzenja.Size = new System.Drawing.Size(318, 311);
+            this.dgvZaduzenja.Size = new System.Drawing.Size(343, 311);
             this.dgvZaduzenja.TabIndex = 0;
             this.dgvZaduzenja.SelectionChanged += new System.EventHandler(this.dgvZaduzenja_SelectionChanged);
             // 
@@ -180,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1091, 450);
+            this.ClientSize = new System.Drawing.Size(1126, 450);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "PronadjiZaduzenje";

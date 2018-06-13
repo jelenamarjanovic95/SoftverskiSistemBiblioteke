@@ -29,12 +29,31 @@ namespace Forms
             lblClanskiBroj.Text = "";
         }
 
+        private bool SamoCifre(string str)
+        {
+            foreach (char c in str)
+            {
+                if (c == '/' || c == '-')
+                    continue;
+                if (c < '0' || c > '9')
+                    return false;
+            }
+
+            return true;
+        }
+
         private void btnDodaj_Click(object sender, EventArgs e)
         {
             lblPoruka.Text = "";
             if(txtAdresa.Text=="" || txtBrojTel.Text == "" || txtImePrezime.Text == "")
             {
                 lblPoruka.Text = "Sva polja su obavezna!";
+                lblPoruka.ForeColor = Color.Red;
+                return;
+            }
+            if(!SamoCifre(txtBrojTel.Text))
+            {
+                lblPoruka.Text = "Broj telefona moze da sadrzi samo cifre!";
                 lblPoruka.ForeColor = Color.Red;
                 return;
             }

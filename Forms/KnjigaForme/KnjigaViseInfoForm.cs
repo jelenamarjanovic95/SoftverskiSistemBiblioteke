@@ -42,11 +42,14 @@ namespace Forms
         {
             KnjigaPrimerak kp = knjiga.SpisakPrimeraka[dgvSpisakPrimeraka.SelectedCells[0].RowIndex];
             new ZaduziForm(kp).Show();
-            //TODO: Refresh info na formi
+
             if(kp.Raspoloziva == false)
             {
                 knjiga.Raspolozivo--;
                 lblBrprRaspol.Text = knjiga.Raspolozivo.ToString();
+                dgvSpisakPrimeraka.DataSource = null;
+                dgvSpisakPrimeraka.DataSource = knjiga.SpisakPrimeraka;
+                dgvSpisakPrimeraka.Refresh();
             }
 
         }

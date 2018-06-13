@@ -38,11 +38,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblPoruka = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblPoruka);
             this.groupBox1.Controls.Add(this.lblAutori);
             this.groupBox1.Controls.Add(this.txtOpis);
             this.groupBox1.Controls.Add(this.btnOdaberiAutore);
@@ -62,7 +64,7 @@
             // lblAutori
             // 
             this.lblAutori.AutoSize = true;
-            this.lblAutori.Location = new System.Drawing.Point(18, 337);
+            this.lblAutori.Location = new System.Drawing.Point(11, 315);
             this.lblAutori.Name = "lblAutori";
             this.lblAutori.Size = new System.Drawing.Size(35, 13);
             this.lblAutori.TabIndex = 20;
@@ -125,9 +127,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(9, 83);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.Size = new System.Drawing.Size(80, 13);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Izdanje:";
+            this.label3.Text = "Godina izdanja:";
             // 
             // label2
             // 
@@ -137,6 +139,14 @@
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Naziv:";
+            // 
+            // lblPoruka
+            // 
+            this.lblPoruka.AutoSize = true;
+            this.lblPoruka.Location = new System.Drawing.Point(11, 346);
+            this.lblPoruka.Name = "lblPoruka";
+            this.lblPoruka.Size = new System.Drawing.Size(0, 13);
+            this.lblPoruka.TabIndex = 21;
             // 
             // IzmeniKnjiguForm
             // 
@@ -165,5 +175,6 @@
         private System.Windows.Forms.Button btnOdaberiAutore;
         private System.Windows.Forms.RichTextBox txtOpis;
         private System.Windows.Forms.Label lblAutori;
+        private System.Windows.Forms.Label lblPoruka;
     }
 }

@@ -37,11 +37,36 @@ namespace Forms
             lblAutori.Text = knjiga.Autori;
         }
 
+        bool SamoCifre(string str)
+        {
+            foreach (char c in str)
+            {
+                if (c < '0' || c > '9')
+                    return false;
+            }
+
+            return true;
+        }
+
         private void btnSacuvaj_Click(object sender, EventArgs e)
         {
             if (txtIzdanje.Text == "" || txtNaziv.Text == "" || txtOpis.Text == "")
             {
-                MessageBox.Show("Sva polja su obavezna!");
+                //MessageBox.Show("Sva polja su obavezna!");
+                lblPoruka.Text = "Sva polja su obavezna!";
+                lblPoruka.ForeColor = Color.Red;
+                return;
+            }
+            if (!SamoCifre(txtIzdanje.Text))
+            {
+                lblPoruka.Text = "Godina izdanja ne sme sadrzati slova!";
+                lblPoruka.ForeColor = Color.Red;
+                return;
+            }
+            if (knjiga.ListaAutora.Count == 0)
+            {
+                lblPoruka.Text = "Niste odabrali nijednog autora!";
+                lblPoruka.ForeColor = Color.Red;
                 return;
             }
 

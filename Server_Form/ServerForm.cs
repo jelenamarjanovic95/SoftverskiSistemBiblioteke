@@ -69,7 +69,14 @@ namespace Server_Form
 
         private void ServerForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            server.ZaustaviServer();
+            try
+            {
+                server.ZaustaviServer();
+            }
+            catch (Exception)
+            {
+                
+            }
         }
         
         internal void OsveziDgv()

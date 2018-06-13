@@ -101,7 +101,7 @@ namespace Forms
                     lblPoruka.ForeColor = Color.Red;
                     return;
                 }
-                DialogResult dialog = MessageBox.Show("Da li ste sigurni da zelite da zaduzie knjigu?", "Provera", MessageBoxButtons.YesNo);
+                DialogResult dialog = MessageBox.Show("Da li ste sigurni da zelite da zaduzite knjigu?", "Provera", MessageBoxButtons.YesNo);
                 if (dialog == DialogResult.Yes)
                 {
                     //Kontroler.Zaduzi(z);

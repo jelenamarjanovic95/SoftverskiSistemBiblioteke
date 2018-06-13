@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblPoruka = new System.Windows.Forms.Label();
             this.lblClanskiBroj = new System.Windows.Forms.Label();
             this.btnDodaj = new System.Windows.Forms.Button();
             this.txtAdresa = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.meni1 = new Forms.Meni();
-            this.lblPoruka = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +61,14 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Unos clana";
+            // 
+            // lblPoruka
+            // 
+            this.lblPoruka.AutoSize = true;
+            this.lblPoruka.Location = new System.Drawing.Point(22, 200);
+            this.lblPoruka.Name = "lblPoruka";
+            this.lblPoruka.Size = new System.Drawing.Size(0, 13);
+            this.lblPoruka.TabIndex = 10;
             // 
             // lblClanskiBroj
             // 
@@ -142,18 +150,10 @@
             // meni1
             // 
             this.meni1.Location = new System.Drawing.Point(2, 1);
-            this.meni1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.meni1.Margin = new System.Windows.Forms.Padding(6);
             this.meni1.Name = "meni1";
             this.meni1.Size = new System.Drawing.Size(640, 26);
             this.meni1.TabIndex = 0;
-            // 
-            // lblPoruka
-            // 
-            this.lblPoruka.AutoSize = true;
-            this.lblPoruka.Location = new System.Drawing.Point(22, 200);
-            this.lblPoruka.Name = "lblPoruka";
-            this.lblPoruka.Size = new System.Drawing.Size(0, 13);
-            this.lblPoruka.TabIndex = 10;
             // 
             // UnosClanaForm
             // 
