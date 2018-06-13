@@ -12,12 +12,12 @@ namespace KontrolerPoslovneLogike
         private static List<Bibliotekar> listaBibliotekara = new List<Bibliotekar>()
         {
             new Bibliotekar()
-                {
-                    Ime = "Jelena",
-                    KorisnickoIme = "jeca",
-                    Lozinka = "jeca",
-                    Prezime = "Marjanovic"
-                },
+            {
+                Ime = "Jelena",
+                KorisnickoIme = "jeca",
+                Lozinka = "jeca",
+                Prezime = "Marjanovic"
+            },
             new Bibliotekar()
             {
                 Ime = "Pera",
@@ -27,15 +27,17 @@ namespace KontrolerPoslovneLogike
             }
         };
 
-        public List<Bibliotekar> UlogovaniBibliotekari { get; set; }
+        //public static List<Bibliotekar> UlogovaniBibliotekari { get; set; }
 
         public static Bibliotekar NadjiBibliotekara(string korisnickoIme, string lozinka)
         {
             foreach (Bibliotekar b in ListaBibliotekara)
             {
-                if (b.KorisnickoIme == korisnickoIme && b.Lozinka == lozinka)
+                if (b.KorisnickoIme.Equals(korisnickoIme) && b.Lozinka.Equals(lozinka))
                 {
-                    return b;
+                    
+                        return b;
+                    
                 }
             }
             return null;

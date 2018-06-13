@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forms", "Forms\Forms.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KontrolerPoslovneLogike", "KontrolerPoslovneLogike\KontrolerPoslovneLogike.csproj", "{2CE7E382-77BE-4034-86B9-D780305489D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server_Console", "Server_Console\Server_Console.csproj", "{7B4F7E5E-D531-4D3A-948F-5894603664CF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server_Form", "Server_Form\Server_Form.csproj", "{A8968C12-9DAE-41E5-9BC2-61F9151C83F3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemskeOperacije", "SistemskeOperacije\SistemskeOperacije.csproj", "{46CE8E3D-9CA9-4583-BB9D-23A299D83170}"
@@ -39,10 +37,6 @@ Global
 		{2CE7E382-77BE-4034-86B9-D780305489D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CE7E382-77BE-4034-86B9-D780305489D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CE7E382-77BE-4034-86B9-D780305489D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7B4F7E5E-D531-4D3A-948F-5894603664CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7B4F7E5E-D531-4D3A-948F-5894603664CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7B4F7E5E-D531-4D3A-948F-5894603664CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7B4F7E5E-D531-4D3A-948F-5894603664CF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A8968C12-9DAE-41E5-9BC2-61F9151C83F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A8968C12-9DAE-41E5-9BC2-61F9151C83F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8968C12-9DAE-41E5-9BC2-61F9151C83F3}.Release|Any CPU.ActiveCfg = Release|Any CPU

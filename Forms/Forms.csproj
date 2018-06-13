@@ -241,10 +241,6 @@
       <Project>{2efa3e0a-4058-49ef-84cd-db7f76f4b2b5}</Project>
       <Name>Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Server_Console\Server_Console.csproj">
-      <Project>{7b4f7e5e-d531-4d3a-948f-5894603664cf}</Project>
-      <Name>Server_Console</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Session\Session.csproj">
       <Project>{225aa739-751c-45fb-aba1-f4b5bcf1dd9f}</Project>
       <Name>Session</Name>

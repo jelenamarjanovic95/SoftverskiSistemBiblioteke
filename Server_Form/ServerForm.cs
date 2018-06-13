@@ -20,9 +20,6 @@ namespace Server_Form
     {
         Thread nitServer;
         Server server;
-        //Socket serverSoket;
-        //BinaryFormatter formater = new BinaryFormatter();
-        //NetworkStream tok;
         public static List<Socket> klijenti;
         public static List<Bibliotekar> bibliotekari = new List<Bibliotekar>();
 
