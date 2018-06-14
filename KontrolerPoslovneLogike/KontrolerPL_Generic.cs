@@ -51,8 +51,9 @@ namespace KontrolerPoslovneLogike
         {
             OpstaSistemskaOperacija ubaciClana = new UbaciClanaSO();
 
-            ubaciClana.IzvrsiSO(c);
-            return c.ClanskiBroj;
+            bool res = ubaciClana.IzvrsiSO(c);
+            if (res) return c.ClanskiBroj;
+            else throw new Exception();
         }
 
         public static List<IOpstiDomenskiObjekat> PretraziClanove(Pretraga pretraga)
@@ -106,8 +107,10 @@ namespace KontrolerPoslovneLogike
         {
             OpstaSistemskaOperacija ubaciKnjigu = new UbaciKnjiguSO();
 
-            ubaciKnjigu.IzvrsiSO(k);
-            return k.KnjigaID;
+            bool res = ubaciKnjigu.IzvrsiSO(k);
+            if (res)
+                return k.KnjigaID;
+            else throw new Exception();
         }
 
         public static List<IOpstiDomenskiObjekat> PretraziKnjige(Pretraga pretraga)
@@ -153,13 +156,15 @@ namespace KontrolerPoslovneLogike
             }
 
             OpstaSistemskaOperacija zaduzi = new ZaduziSO();
-            zaduzi.IzvrsiSO(z);
+            bool res = zaduzi.IzvrsiSO(z);
+            if (!res) throw new Exception();
         }
 
         public static void Razduzi(Zaduzenje z)
         {
             OpstaSistemskaOperacija razduzi = new RazduziSO();
-            razduzi.IzvrsiSO(z);
+            bool res = razduzi.IzvrsiSO(z);
+            if (!res) throw new Exception();
         }
 
         public static Zaduzenje NadjiZaduzenje(Clan c, KnjigaPrimerak kp)
@@ -174,6 +179,15 @@ namespace KontrolerPoslovneLogike
 
             if (rez)
                 return nadjiZaduzenje.Rezultat as Zaduzenje;
+            else throw new Exception();
+        }
+
+        public static int DajPrimerakID()
+        {
+            OpstaSistemskaOperacija primerakID = new DajPrimerakIDSO();
+            bool res = primerakID.IzvrsiSO(new KnjigaPrimerak());
+
+            if (res) return (int)primerakID.Rezultat;
             else throw new Exception();
         }
     }

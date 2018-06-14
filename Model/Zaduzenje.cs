@@ -54,6 +54,11 @@ namespace Model
             return $"ClanskiBroj = {Clan.ClanskiBroj} and PrimerakID = {KnjigaPrimerak.PrimerakID} and KnjigaID = {KnjigaPrimerak.Knjiga.KnjigaID} and DatumOd = #{DatumOd.ToString("dd-MMM-yyyy")}#";
         }
 
+        public string VratiKljucZaMax()
+        {
+            return "";
+        }
+
         public List<IOpstiDomenskiObjekat> VratiListu(OleDbDataReader citac)
         {
             List<IOpstiDomenskiObjekat> lista = new List<IOpstiDomenskiObjekat>();

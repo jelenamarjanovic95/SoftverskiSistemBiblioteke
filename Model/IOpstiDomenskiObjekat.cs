@@ -13,6 +13,8 @@ namespace Model
         string VratiKljucIUslov();
         string VratiVrednostiZaInsert();
         string VratiVrednostZaUpdate();
+        string VratiKljucZaMax();
         List<IOpstiDomenskiObjekat> VratiListu(OleDbDataReader citac);
+
     }
 }

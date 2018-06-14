@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DajPrimerakIDSO.cs" />
     <Compile Include="NadjiClanaSO.cs" />
     <Compile Include="NadjiKnjiguSO.cs" />
     <Compile Include="NadjiZaduzenjeSO.cs" />

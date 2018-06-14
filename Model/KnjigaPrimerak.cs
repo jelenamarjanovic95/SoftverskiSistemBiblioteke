@@ -41,6 +41,11 @@ namespace Model
             return $"KnjigaPrimerak.KnjigaID = {knjiga.KnjigaID} and PrimerakID = {PrimerakID}"; //Treba dodati i primerakID?
         }
 
+        public string VratiKljucZaMax()
+        {
+            return "PrimerakID";
+        }
+
         public List<IOpstiDomenskiObjekat> VratiListu(OleDbDataReader citac)
         {
             List<IOpstiDomenskiObjekat> lista = new List<IOpstiDomenskiObjekat>();

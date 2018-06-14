@@ -38,6 +38,11 @@ namespace Model
             return $"AutorID = {AutorID}";
         }
 
+        public string VratiKljucZaMax()
+        {
+            return "";
+        }
+
         public List<IOpstiDomenskiObjekat> VratiListu(OleDbDataReader citac)
         {
             List<IOpstiDomenskiObjekat> listaAutora = new List<IOpstiDomenskiObjekat>();

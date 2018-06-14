@@ -15,7 +15,8 @@ namespace SistemskeOperacije
             try
             {
                 Knjiga k = odo as Knjiga;
-                k.KnjigaID = GenerickiBroker.Instanca.DajKnjigaID();
+                //k.KnjigaID = GenerickiBroker.Instanca.DajKnjigaID();
+                k.KnjigaID = GenerickiBroker.Instanca.SelectMax(k);
 
                 int rez = GenerickiBroker.Instanca.Insert(k);
 

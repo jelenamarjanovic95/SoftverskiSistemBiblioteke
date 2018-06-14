@@ -15,7 +15,8 @@ namespace SistemskeOperacije
             try
             {
                 Clan c = odo as Clan;
-                c.ClanskiBroj = GenerickiBroker.Instanca.DajClanskiBroj();
+                //c.ClanskiBroj = GenerickiBroker.Instanca.DajClanskiBroj();
+                c.ClanskiBroj = GenerickiBroker.Instanca.SelectMax(c);
 
                 int rez = GenerickiBroker.Instanca.Insert(c);
 

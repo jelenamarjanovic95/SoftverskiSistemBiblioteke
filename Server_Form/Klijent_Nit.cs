@@ -134,7 +134,8 @@ namespace Server_Form
                         case Operacija.DajPrimerakID:
                             try
                             {
-                                int id = Kontroler.DajPrimerakID();
+                                //int id = Kontroler.DajPrimerakID();
+                                int id = KontrolerPL_Generic.DajPrimerakID();
                                 odgovor.TransferObjekat = id;
                                 odgovor.Signal = true;
                             }

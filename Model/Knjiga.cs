@@ -73,8 +73,7 @@ namespace Model
                 raspolozivo = spisakPrimeraka.Count;
             }
         }
-
-        //TODO: Ime i prezime autora
+        
         public override string ToString()
         {
             return $"{naziv}";
@@ -90,8 +89,11 @@ namespace Model
             return $"KnjigaID = {KnjigaID}";
         }
 
-        //IDEJA: U sistemskoj operaciji, pozvacu prvo za knjigu da vrati sve, 
-        //pa onda za svaku knjigu, pravim listu primeraka novim pozivom brokera
+        public string VratiKljucZaMax()
+        {
+            return "KnjigaID";
+        }
+        
         public List<IOpstiDomenskiObjekat> VratiListu(OleDbDataReader citac)
         {
             List<IOpstiDomenskiObjekat> lista = new List<IOpstiDomenskiObjekat>();

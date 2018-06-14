@@ -145,53 +145,68 @@ namespace Session
             return lista;
         }
 
-        public int DajClanskiBroj()
+        public int SelectMax(IOpstiDomenskiObjekat odo)
         {
-            komanda.CommandText = "Select Max(ClanskiBroj) from Clan";
+            komanda.CommandText = $"Select max({odo.VratiKljucZaMax()}) from {odo.VratiImeTabele()}";
             komanda.CommandType = System.Data.CommandType.Text;
-
             var res = komanda.ExecuteScalar();
-            if (res != DBNull.Value)
-            {
-                return Convert.ToInt32(res) + 23;
-            }
-            else
-            {
-                return 1111;
-            }
-        }
-
-        public int DajKnjigaID()
-        {
-            komanda.CommandText = "Select Max(KnjigaID) from Knjiga";
-            komanda.CommandType = System.Data.CommandType.Text;
-
-            var res = komanda.ExecuteScalar();
-            if (res != DBNull.Value)
+            if(res != DBNull.Value)
             {
                 return Convert.ToInt32(res) + 1;
             }
             else
             {
-                return 1111;
+                return 11;
             }
         }
 
-        public int DajPrimerakID()
-        {
-            komanda.CommandText = "Select Max(PrimerakID) from KnjigaPrimerak";
-            komanda.CommandType = System.Data.CommandType.Text;
+        //public int DajClanskiBroj()
+        //{
+        //    komanda.CommandText = "Select Max(ClanskiBroj) from Clan";
+        //    komanda.CommandType = System.Data.CommandType.Text;
 
-            var res = komanda.ExecuteScalar();
-            if (res != DBNull.Value)
-            {
-                return Convert.ToInt32(res) + 1;
-            }
-            else
-            {
-                return 111;
-            }
+        //    var res = komanda.ExecuteScalar();
+        //    if (res != DBNull.Value)
+        //    {
+        //        return Convert.ToInt32(res) + 23;
+        //    }
+        //    else
+        //    {
+        //        return 1111;
+        //    }
+        //}
 
-        }
+        //public int DajKnjigaID()
+        //{
+        //    komanda.CommandText = "Select Max(KnjigaID) from Knjiga";
+        //    komanda.CommandType = System.Data.CommandType.Text;
+
+        //    var res = komanda.ExecuteScalar();
+        //    if (res != DBNull.Value)
+        //    {
+        //        return Convert.ToInt32(res) + 1;
+        //    }
+        //    else
+        //    {
+        //        return 1111;
+        //    }
+        //}
+
+        //public int DajPrimerakID()
+        //{
+        //    komanda.CommandText = "Select Max(PrimerakID) from KnjigaPrimerak";
+        //    komanda.CommandType = System.Data.CommandType.Text;
+
+        //    var res = komanda.ExecuteScalar();
+        //    if (res != DBNull.Value)
+        //    {
+        //        return Convert.ToInt32(res) + 1;
+        //    }
+        //    else
+        //    {
+        //        return 111;
+        //    }
+
+        //}
     }
 }

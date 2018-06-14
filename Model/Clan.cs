@@ -44,6 +44,11 @@ namespace Model
             return $"ClanskiBroj = {clanskiBroj}";
         }
 
+        public string VratiKljucZaMax()
+        {
+            return "ClanskiBroj";
+        }
+
         public List<IOpstiDomenskiObjekat> VratiListu(OleDbDataReader citac)
         {
             List<IOpstiDomenskiObjekat> lista = new List<IOpstiDomenskiObjekat>();
