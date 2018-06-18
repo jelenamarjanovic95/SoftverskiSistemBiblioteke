@@ -71,7 +71,7 @@ namespace Model
 
         public string VratiVrednostiZaInsert()
         {
-            return $"{ClanskiBroj}, '{ImePrezime}', '{Adresa}', '{BrojTelefona}'";
+            return $"{ClanskiBroj}, '{ImePrezime}', '{BrojTelefona}', '{Adresa}'";
         }
 
         public string VratiVrednostZaUpdate()

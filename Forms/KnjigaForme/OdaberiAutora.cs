@@ -130,14 +130,21 @@ namespace Forms
 
         private BindingList<Autor> Kloniraj(BindingList<Autor> lista)
         {
-            BindingList<Autor> listaAutora = new BindingList<Autor>();
-
-            foreach(Autor a in lista)
+            try
             {
-                listaAutora.Add(a);
-            }
+                BindingList<Autor> listaAutora = new BindingList<Autor>();
 
-            return listaAutora;
+                foreach (Autor a in lista)
+                {
+                    listaAutora.Add(a);
+                }
+
+                return listaAutora;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         private void btnSacuvaj_Click(object sender, EventArgs e)

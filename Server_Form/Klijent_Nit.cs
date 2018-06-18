@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 namespace Server_Form
 {
     public delegate void noviBiblDelegat(Bibliotekar b);
+    public delegate void diskonektovanBibliotekar(Bibliotekar b);
     public class Klijent_Nit
     {
         List<Socket> listaKlijenata;
@@ -24,6 +25,7 @@ namespace Server_Form
         ServerForm forma;
 
         public event noviBiblDelegat NoviBibliotekar;
+        public event diskonektovanBibliotekar DiskonektovanBibliotekar;
 
         public Klijent_Nit(NetworkStream tok,List<Socket> k, Socket klij, ServerForm sf)
         {
@@ -53,7 +55,7 @@ namespace Server_Form
                             try
                             {
                                 Bibliotekar bibl = zahtevKlijenta.TransferObjekat as Bibliotekar;
-                                b = Kontroler.Login(bibl.KorisnickoIme, bibl.Lozinka);
+                                b = KontrolerPL_Generic.Login(bibl.KorisnickoIme, bibl.Lozinka);
                                 odgovor.TransferObjekat = b;
                                 odgovor.Signal = true;
                                 NoviBibliotekar.Invoke(b);
@@ -353,6 +355,7 @@ namespace Server_Form
             }
         }
 
+        
         internal void UgasiKlijenta()
         {
             try
@@ -361,7 +364,8 @@ namespace Server_Form
                 listaKlijenata.Remove(klijent);
                 klijent.Shutdown(SocketShutdown.Both);
                 klijent.Close();
-                forma.OsveziDgv();
+                DiskonektovanBibliotekar.Invoke(b);
+                //forma.OsveziDgv();
             }
             catch (Exception)
             {

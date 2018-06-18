@@ -400,7 +400,7 @@ namespace Forms
             {
                 TransferKlasa zahtev = new TransferKlasa()
                 {
-                    Operacija = Operacija.ObrisiClana,
+                    Operacija = Operacija.ObrisiKnjigu,
                     TransferObjekat = k
                 };
                 formater.Serialize(tok, zahtev);

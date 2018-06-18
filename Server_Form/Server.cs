@@ -341,6 +341,7 @@ namespace Server_Form
                     klijenti.Add(klijent);
                     Klijent_Nit nit = new Klijent_Nit(tok, klijenti, klijent, forma);
                     nit.NoviBibliotekar += UnesenNovBibliotekar;
+                    nit.DiskonektovanBibliotekar += DiskonektovanBibliotekar;
                     klijentNiti.Add(nit);
                 }
             }
@@ -348,6 +349,12 @@ namespace Server_Form
             {
                 
             }
+        }
+
+        private void DiskonektovanBibliotekar(Bibliotekar b)
+        {
+            bibliotekari.Remove(b);
+            this.forma.OsveziDgv();
         }
 
         private void UnesenNovBibliotekar(Bibliotekar b)

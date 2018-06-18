@@ -11,6 +11,13 @@ namespace KontrolerPoslovneLogike
 {
     public class KontrolerPL_Generic
     {
+        public static Bibliotekar Login(string korisnickoIme, string lozinka)
+        {
+            Bibliotekar b = Repozitorijum.NadjiBibliotekara(korisnickoIme, lozinka);
+            if (b == null) throw new Exception();
+            else return b;
+        }
+
         public static List<IOpstiDomenskiObjekat> VratiSveClanove()
         {
             OpstaSistemskaOperacija vratiClanove = new VratiSveClanoveSO();
