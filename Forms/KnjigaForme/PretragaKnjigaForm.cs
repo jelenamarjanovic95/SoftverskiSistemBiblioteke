@@ -86,6 +86,7 @@ namespace Forms
                     if (Komunikacija.Instance.ObrisiKnjigu(k))
                     {
                         MessageBox.Show("Uspesno obrisana knjiga!");
+                        PretraziKnjige();
                     }
                     else
                     {
